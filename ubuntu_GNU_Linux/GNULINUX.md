@@ -65,20 +65,20 @@ Linux justin-labtop 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu 
      我这边使用的是https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
 
      ​         6.1.40（教程使用为：windows hosts），小伙伴们可以根据自己的操作系统进行选择。
-     <img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813135244431.png" alt="image-20230813135244431" style="zoom: 33%;" />
+     <img src="pics\pics\image-20230813135244431.png" alt="image-20230813135244431" style="zoom: 33%;" />
 
      双击下载完成的.exe安装:
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813140458186.png" alt="image-20230813140458186" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813140458186.png" alt="image-20230813140458186" style="zoom: 33%;" />
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813140534553.png" alt="image-20230813140534553" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813140534553.png" alt="image-20230813140534553" style="zoom: 33%;" />
 
 1. 下载Ubuntu iso文件
    本人学习过程中使用的为ubuntu 18.04
    大家可以根据自己的需要安装不通的版本
 
 [ubuntu阿里云](http://mirrors.aliyun.com/oldubuntu-releases/releases/?spm=a2c6h.25603864.0.0.5ee66f0fOBy7kn "Ubuntu阿里云镜像源")
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813135918856.png" alt="image-20230813135918856" style="zoom: 25%;" />
+<img src="pics\pics\image-20230813135918856.png" alt="image-20230813135918856" style="zoom: 25%;" />
 
 点击新建：并配置文件所在目录
 名称：自己取（英文）
@@ -88,108 +88,108 @@ Linux justin-labtop 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu 
 
 
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813140821651.png" style="zoom:33%;" />
+<img src="pics\pics\image-20230813140821651.png" style="zoom:33%;" />
 
 内存大小一般可设置为3G或者4G
 
 
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813140927610.png" alt="image-20230813140927610" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813140927610.png" alt="image-20230813140927610" style="zoom: 50%;" />
 后面的操作基本就是下一步：
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141003333.png" alt="image-20230813141003333" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813141003333.png" alt="image-20230813141003333" style="zoom: 50%;" />
 下一步
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141020403.png" alt="image-20230813141020403" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813141020403.png" alt="image-20230813141020403" style="zoom: 50%;" />
 :warning::动态分配！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141033414.png" alt="image-20230813141033414" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813141033414.png" alt="image-20230813141033414" style="zoom: 50%;" />
 
 一般设置为20G，基本够用了
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141056309.png" alt="image-20230813141056309" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813141056309.png" alt="image-20230813141056309" style="zoom: 50%;" />
 启动！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141117125.png" alt="image-20230813141117125" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813141117125.png" alt="image-20230813141117125" style="zoom: 33%;" />
 选择一个虚拟光盘文件
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141157590.png" alt="image-20230813141157590" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141157590.png" alt="image-20230813141157590" style="zoom:50%;" />
 
 选择下载好的iso文件
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141228907.png" alt="image-20230813141228907" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813141228907.png" alt="image-20230813141228907" style="zoom: 33%;" />
 
 选择
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141302172.png" alt="image-20230813141302172" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813141302172.png" alt="image-20230813141302172" style="zoom: 33%;" />
 启动！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141316200.png" alt="image-20230813141316200" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141316200.png" alt="image-20230813141316200" style="zoom:50%;" />
 
 中文简体+安装ubuntu
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141624788.png" alt="image-20230813141624788" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141624788.png" alt="image-20230813141624788" style="zoom:50%;" />
 
 汉语
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141654299.png" alt="image-20230813141654299" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141654299.png" alt="image-20230813141654299" style="zoom:50%;" />
 
 最小安装！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141757260.png" alt="image-20230813141757260" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141757260.png" alt="image-20230813141757260" style="zoom:50%;" />
 
 现在安装
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141830739.png" alt="image-20230813141830739" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141830739.png" alt="image-20230813141830739" style="zoom:50%;" />
 
 继续
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141854922.png" alt="image-20230813141854922" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141854922.png" alt="image-20230813141854922" style="zoom:50%;" />
 
 设置位置时区
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813141919407.png" alt="image-20230813141919407" style="zoom:50%;" />
+<img src="pics\pics\image-20230813141919407.png" alt="image-20230813141919407" style="zoom:50%;" />
 
 创建用户密码
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813142004619.png" alt="image-20230813142004619" style="zoom:50%;" />
+<img src="pics\pics\image-20230813142004619.png" alt="image-20230813142004619" style="zoom:50%;" />
 
 等待安装
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813142018983.png" alt="image-20230813142018983" style="zoom:50%;" />
+<img src="pics\pics\image-20230813142018983.png" alt="image-20230813142018983" style="zoom:50%;" />
 
 安装完成，重启！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813142907632.png" alt="image-20230813142907632" style="zoom: 50%;" />
+<img src="pics\pics\image-20230813142907632.png" alt="image-20230813142907632" style="zoom: 50%;" />
 
 输入密码登录账户
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143016923.png" alt="image-20230813143016923" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143016923.png" alt="image-20230813143016923" style="zoom:50%;" />
 
 不升级
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143422911.png" alt="image-20230813143422911" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143422911.png" alt="image-20230813143422911" style="zoom:50%;" />
 稍后提醒
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143520039.png" alt="image-20230813143520039" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143520039.png" alt="image-20230813143520039" style="zoom:50%;" />
 
 鼠标右键打开终端或者ctrl+alt+t
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143627397.png" alt="image-20230813143627397" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143627397.png" alt="image-20230813143627397" style="zoom:50%;" />
 
 输入`uname -a`,即可看到我们的版本信息
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143721885.png" alt="image-20230813143721885" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143721885.png" alt="image-20230813143721885" style="zoom:50%;" />
 
 设备:soon::安装增强功能
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813143835598.png" alt="image-20230813143835598" style="zoom:50%;" />
+<img src="pics\pics\image-20230813143835598.png" alt="image-20230813143835598" style="zoom:50%;" />
 
 运行！
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813144047231.png" alt="image-20230813144047231" style="zoom:50%;" />
+<img src="pics\pics\image-20230813144047231.png" alt="image-20230813144047231" style="zoom:50%;" />
 
 按下回车
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813144134476.png" alt="image-20230813144134476" style="zoom:50%;" />
+<img src="pics\pics\image-20230813144134476.png" alt="image-20230813144134476" style="zoom:50%;" />
 此处提示我们需要安装gcc make perl
 于是我们在终端中输入如下命令，并按下回车
 
@@ -198,26 +198,26 @@ sudo apt-get update
 sudo apt-get install gcc make perl
 ```
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813151911578.png" alt="image-20230813151911578" style="zoom:50%;" />
+<img src="pics\pics\image-20230813151911578.png" alt="image-20230813151911578" style="zoom:50%;" />
 
 双击桌面的光盘图标文件，点击运行软件
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813152029768.png" alt="image-20230813152029768" style="zoom:50%;" />
+<img src="pics\pics\image-20230813152029768.png" alt="image-20230813152029768" style="zoom:50%;" />
 
 
 
 打开终端输入`reboot` 重启
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813144242508.png" alt="image-20230813144242508" style="zoom:50%;" />
+<img src="pics\pics\image-20230813144242508.png" alt="image-20230813144242508" style="zoom:50%;" />
 
 
 此时我们便可以调整我们的窗口大小
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813144435889.png" alt="image-20230813144435889" style="zoom:50%;" />
+<img src="pics\pics\image-20230813144435889.png" alt="image-20230813144435889" style="zoom:50%;" />
 
 
 
 设置共享粘贴板双向
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813152308953.png" alt="image-20230813152308953" style="zoom:50%;" />
+<img src="pics\pics\image-20230813152308953.png" alt="image-20230813152308953" style="zoom:50%;" />
 
 ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
 
@@ -229,11 +229,11 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
   0. 在已有的windows下去安装Linux，操作也很简单，Ubuntu安装基本也是下一步，下一步......
 
   我的双系统如下，本着认真负责的态度，我再给大家介绍一下如何在windows的基础上去安装ubuntu22.04Lts
-  <img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813152809103.png" alt="image-20230813152809103" style="zoom:50%;" />
+  <img src="pics\pics\image-20230813152809103.png" alt="image-20230813152809103" style="zoom:50%;" />
 
   使用DiskGenius删除我原来的Ubuntu22.04lts，右键开始找到磁盘管理，自行准备大概100G或者150G或者根据你自己的需求进行划分，我这里就是用我未分配的空间（未分配需要你自己从原来的磁盘压缩，），网上大多数都是100G，大家可自行斟酌。
 
-  <img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813172749748.png" alt="image-20230813172749748" style="zoom:50%;" />
+  <img src="pics\pics\image-20230813172749748.png" alt="image-20230813172749748" style="zoom:50%;" />
 
   emmm还是说一下分盘的一些常识：
   从左往右:C,D,我们买来的新电脑经常会由厂商帮助我们分好盘，不过现在大家动不动就是1t，正常使用的情况，根本不用担心C盘爆满，而且盘符的读写速度会随着你从左往右下降，C盘的读写速度是最快的，但是一般来说感知不明显，但是你玩一些大型游戏放在移动硬盘和C盘应该就会有明显的感觉。<br>
@@ -242,35 +242,35 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
   :exclamation:注意扩展只能相邻扩展，不能跨盘符扩展，比如我上面的156.57GB就不能直接扩展到C盘，只能扩展到D盘。
 
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813175310881.png" alt="image-20230813175310881" style="zoom:50%;" />
+<img src="pics\pics\image-20230813175310881.png" alt="image-20230813175310881" style="zoom:50%;" />
 
 将之前的未分配区域扩展到D盘
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813180308341.png" alt="image-20230813180308341" style="zoom:50%;" />
+<img src="pics\pics\image-20230813180308341.png" alt="image-20230813180308341" style="zoom:50%;" />
 
 右键D盘，点击压缩卷，
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813180753006.png" alt="image-20230813180753006" style="zoom:50%;" />
+<img src="pics\pics\image-20230813180753006.png" alt="image-20230813180753006" style="zoom:50%;" />
 
 我们在这里压缩1024 x 150 = 153600MB，点击压缩
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813180930000.png" alt="image-20230813180930000" style="zoom:50%;" />
+<img src="pics\pics\image-20230813180930000.png" alt="image-20230813180930000" style="zoom:50%;" />
 
 压缩完成：
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813181152999.png" alt="image-20230813181152999" style="zoom:50%;" />
+<img src="pics\pics\image-20230813181152999.png" alt="image-20230813181152999" style="zoom:50%;" />
 
 1. 制作启动盘
 
    一个大小8G以上的U盘，16，32都行
    使用工具：[Rufus](https://rufus.ie/zh/)
 
-   <img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813181436496.png" alt="image-20230813181436496" style="zoom:50%;" />
+   <img src="pics\pics\image-20230813181436496.png" alt="image-20230813181436496" style="zoom:50%;" />
 
    先将空U盘插入电脑，Rufus下载完成后，直接双击启动镜像文件可以选择你下载好的镜像文件，我建议你使用22.04lts
    [Ubuntu22.04Lts](http://mirrors.aliyun.com/oldubuntu-releases/releases/22.04.1/?spm=a2c6h.25603864.0.0.41457ff3wmSZVM "ubuntu22.04")(阿里云下载)
    
 
-<img src="D:\github_repo\baselearn\ubuntu_GNU_Linux\pics\pics\image-20230813203931260.png" alt="image-20230813203931260" style="zoom: 33%;" />
+<img src="pics\pics\image-20230813203931260.png" alt="image-20230813203931260" style="zoom: 33%;" />
 
 文件系统选择默认即可。然后点击开始，下面进度条显示完成之后我们就完成了启动盘的制作。
 
