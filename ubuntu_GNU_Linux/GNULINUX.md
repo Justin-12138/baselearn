@@ -402,11 +402,11 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
 
 话不多说，那我们开始吧！
 
-- ubuntu中使用`ctrl+alt+t`，打开终端，关于什么是终端呢，这个又跟计算机的历史发展存在联系
-  大家可以看一下这位博主的视频，从历史的角度向我们展示了什么是[终端](https://www.bilibili.com/video/BV16A411675V/?spm_id_from=333.880.my_history.page.click)?
+- **终端模拟器**
+  ubuntu中使用`ctrl+alt+t`，打开终端，关于什么是终端呢，这个又跟计算机的历史发展存在联系。大家可以看一下这位博主的视频，从历史的角度向我们展示了[终端与shell的发展与区别](https://www.bilibili.com/video/BV16A411675V/?spm_id_from=333.880.my_history.page.click)?
   在此处呢，我们所面临的终端界面就是我们之前所提及的CUI，用于输入密令的一个交互界面。在工作中绝大多数时间我们所接触的就是一个终端，或者远程的连接，操作也是一个简单的终端，纯字符操作，纯字符反馈。
 
-- **命令的通用格式(组成)**
+- **密令的通用格式(组成)**
   
   `command [-options] [parameters]`
   `命令 [选项] [参数]`
@@ -425,34 +425,56 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
   ls -R                    # 递归显示当前目录中的所有文件和子目录
   ls -l /etc/passwd        # 显示/etc/passwd文件的详细信息
   
-- **内建密令**
-  所谓 Shell 内建命令，就是由 Bash 自身提供的命令，而不是文件系统中的某个可执行文件。例如，用于进入或者切换目录的 `cd` 命令，虽然我们一直在使用它，但如果不加以注意很难意识到它与普通命令的性质是不一样的：该命令并不是某个外部文件，只要在 Shell 中你就一定可以运行这个命令。
+- **内建密令与外部密令**
   
-  当在bash中键入一个命令时系统会先看他是否是一个内建命令，如果不是才会查看是否是系统命令或第三方工具。因为即不需要通过衍生出子进程来进行，也不需要打开程序文件，内建命令的执行速度要更快，效率也更高。
+  + 内建密令
+    
+    内部命令实际上是shell程序的一部分，其中包含的是一些比较简单的linux系统命令，这些命令由shell程序识别并在shell程序内部完成运行，通常在linux系统加载运行时shell就被加载并驻留在系统内存中。内部命令是写在bashy源码里面的，其执行速度比外部命令快，因为解析内部命令shell不需要创建子进程。比如：exit，history，cd，echo等。
+    
+  + 外部密令
+    
+    外部密令是linux系统中的实用程序部分，因为实用程序的功能通常都比较强大，所以其包含的程序量也会很大，在系统加载时并不随系统一起被加载到内存中，而是在需要时才将其调用内存。通常外部命令的实体并不包含在shell中，但是其命令执行过程是由shell程序控制的。shell程序管理外部命令执行的路径查找、加载存放，并控制命令的执行。外部命令是在bash之外额外安装的，通常放在/bin，/usr/bin，/sbin，/usr/sbin……等等。可通过“echo $PATH”命令查看外部命令的存储路径，比如：ls、vi等。
+    
+    [Linux内部命令和外部命令](https://blog.51cto.com/u_15060546/2651988[)
   
   例如 `cd` 和 `exit` 命令都是内建于 bash shell。可以利用 `type` 命令来查看某个命令是否是内建的]。比如 `echo` 和 `pwd` 既有内建命令也有外部命令。可以使用 `type -a` 来查看。
-  
-- 
-  
-  
-
-  
-
-  
+  ```la
+  julie@julie-VirtualBox:~$ type -a exit
+  exit 是 shell 内建
+  julie@julie-VirtualBox:~$ type -a cd
+  cd 是 shell 内建
+  julie@julie-VirtualBox:~$ type -a echo
+  echo 是 shell 内建
+  echo 是 /bin/echo
+  julie@julie-VirtualBox:~$ 
+  ```
 
 ## 5.Linux通用常用密令
 
-​	再次写在前面，由于本教程纯属是个人的学习笔记，关于密令的学习顺序基本都是根据本人的实际情况来定制的
+再次写在前面，由于本教程纯属是个人的学习笔记，关于密令的学习顺序基本都是根据本人的实际情况来定制的.
 
-1. ```help``` command,显示某命令的相关信息。
-   **意思是如果你想知道某个密令的用法，直接使用 ```help```+ command**
+help
+--help
+man
+info
+help **命令只能用于内建命令的帮助信息查询**
+[帮助密令](https://zhuanlan.zhihu.com/p/105096446)
+
+1. **帮助密令之help(只适用于内建密令)**
+   ```help``` command,显示内建命令的相关信息。
+   **意思是如果你想知道某个 *内建密令*  的用法，直接使用 ```help```+ command**
    例如:	help help
    			help cd
 
-   ​			help grep
+   ​			help exit
    ......	
    🌰
 
+   julie@julie-VirtualBox:~$ help help
+   help: help [-dms] [模式 ...]
+   	%此处我们可以看到说help的
+       显示内建命令的相关信息。
+       
    ```latex
    julie@julie-VirtualBox:~$ help help
    help: help [-dms] [模式 ...]
@@ -479,40 +501,191 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
    上述主要内容有：相关信息+选项+参数
    
    ```
+   ```latex
+   julie@julie-VirtualBox:~$ help exit
+   exit: exit [n]
+       退出shell。
+       
+       以状态 N 退出 shell。  如果 N 被省略，则退出状态
+       为最后一个执行的命令的退出状态。
+   julie@julie-VirtualBox:~$ help history 
+   history: history [-c] [-d 偏移量] [n] 或 history -anrw [文件名] 或 history -ps 参数 [参数...]
+       Display or manipulate the history list.
+       
+       Display the history list with line numbers, prefixing each modified
+       entry with a `*'.  An argument of N lists only the last N entries.
+   ......
+   ```
+
+   
+
+2. **帮助密令之 ```--help```**
+
+   当我们想知道某些外部密令的时候，可以使用 --help来获取其用法
+
+   其使用格式为：```command --help```
 
    ```latex
+   julie@julie-VirtualBox:~$ help ls
+   bash: help: 没有与 `ls' 匹配的帮助主题。尝试 `help help' 或 `man -k ls' 或 `info ls'。
+   julie@julie-VirtualBox:~$ type -a ls
+   ls 是 `ls --color=auto' 的别名
+   ls 是 /bin/ls
+   julie@julie-VirtualBox:~$ ls --help
+   用法：ls [选项]... [文件]...
+   List information about the FILEs (the current directory by default).
+   Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+   
+   必选参数对长短选项同时适用。
+     -a, --all			不隐藏任何以. 开始的项目
+     -A, --almost-all		列出除. 及.. 以外的任何项目
+         --author			与-l 同时使用时列出每个文件的作者
+     -b, --escape			以八进制溢出序列表示不可打印的字符
+         --block-size=SIZE      scale sizes by SIZE before printing them; e.g.,
+                                  '--block-size=M' prints sizes in units of
+                                  1,048,576 bytes; see SIZE format below
+     -B, --ignore-backups       do not list implied entries ending with ~
+   ......
+   %注意此处表示ls支持 --help参数
+         --help		显示此帮助信息并退出
+         --version		显示版本信息并退出
+   
+   The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+   Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+   
+   使用色彩来区分文件类型的功能已被禁用，默认设置和 --color=never 同时禁用了它。
+   使用 --color=auto 选项，ls 只在标准输出被连至终端时才生成颜色代码。
+   LS_COLORS 环境变量可改变此设置，可使用 dircolors 命令来设置。
+   
+   退出状态：
+    0  正常
+    1  一般问题 (例如：无法访问子文件夹)
+    2  严重问题 (例如：无法使用命令行参数)
+   ```
+
+   内建密令也可以使用 --help展示其用法
+
+   ```latex
+   julie@julie-VirtualBox:~$ cd --help
+   cd: cd [-L|[-P [-e]] [-@]] [目录]
+       改变 shell 工作目录。
+       
+       改变当前目录至 DIR 目录。默认的 DIR 目录是 shell 变量 HOME
+       的值。
+       
+       变量 CDPATH 定义了含有 DIR 的目录的搜索路径，其中不同的目录名称由冒号 (:)分隔。
+       一个空的目录名称表示当前目录。如果要切换到的 DIR 由斜杠 (/) 开头，则 CDPATH
+       变量不会被使用。
+       
+       如果路径找不到，并且 shell 选项 `cdable_vars' 被设定，则参数词被假定为一个
+       变量名。如果该变量有值，则它的值被当作 DIR 目录。
+       
+       选项：
+           -L	强制跟随符号链接: 在处理 `..' 之后解析 DIR 中的符号链接。
+           -P	使用物理目录结构而不跟随符号链接: 在处理 `..' 之前解析 DIR 中的符号链接。
+           -e	如果使用了 -P 参数，但不能成功确定当前工作目录时，返回非零的返回值。
+           -@	在支持拓展属性的系统上，将一个有这些属性的文件当作有文件属性的目录。
+       
+       默认情况下跟随符号链接，如同指定 `-L'。
+       `..' 使用移除向前相邻目录名成员直到 DIR 开始或一个斜杠的方式处理。
+       
+       退出状态：
+       如果目录改变，或在使用 -P 选项时 $PWD 修改成功时返回 0，否则非零。
+   julie@julie-VirtualBox:~$ exit --help
+   exit: exit [n]
+       退出shell。
+       
+       以状态 N 退出 shell。  如果 N 被省略，则退出状态
+       为最后一个执行的命令的退出状态。
+   ```
+
+3. 帮助密令之man
+
+   ```latex
+   %尝试使用man --help来获取man的使用方法
+   julie@julie-VirtualBox:~$ man --help
+   用法： man [选项...] [章节] 手册页...
+   
+     -C, --config-file=文件   使用该用户设置文件
+     -d, --debug                输出调试信息
+     -D, --default              将所有选项都重置为默认值
+         --warnings[=警告]    开启 groff 的警告
+   
+    主要运行模式：
+     -f, --whatis               等同于 whatis
+     -k, --apropos              等同于 apropos
+     -K, --global-apropos       在所有页面中搜索文字
+     -l, --local-file
+                                把“手册页”参数当成本地文件名来解读
+   ......
+     -V, --version              打印程序版本
    
    ```
 
+
    ```latex
+   %man ls
+   LS(1)                                                            User Commands                                                            LS(1)
+   
+   NAME%
+          ls - list directory contents
+   
+   SYNOPSIS%
+          ls [OPTION]... [FILE]...
+   
+   DESCRIPTION%
+          List  information  about  the  FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is
+          specified.
+   
+          Mandatory arguments to long options are mandatory for short options too.
+   
+          -a, --all
+                 do not ignore entries starting with .
+   
+          -A, --almost-all
+                 do not list implied . and ..
+   ......
+      Exit status:
+          0      if OK,
+   
+          1      if minor problems (e.g., cannot access subdirectory),
+   
+          2      if serious trouble (e.g., cannot access command-line argument).
+   
+   AUTHOR%
+          Written by Richard M. Stallman and David MacKenzie.
+   
+   REPORTING BUGS%
+          GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+          Report ls translation bugs to <http://translationproject.org/team/>
+   
+   COPYRIGHT%
+          Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+          This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+   
+   SEE ALSO%
+          Full documentation at: <http://www.gnu.org/software/coreutils/ls>
+          or available locally via: info '(coreutils) ls invocation'
+   
+   GNU coreutils 8.28                                                January 2018                                                            LS(1)
+   
    
    ```
 
    
 
    
-
-2. 
-
-   
    
 
-3. 
-
-   
+4. 帮助密令之info
    
 
-4. 
-
-   
-   
-
-5. 
-
-   
+5. 常用密令之cd，ls，cp，mv，
    
 
 6. 
+
+   
 
    
 
@@ -521,6 +694,26 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
    
 
 8. 
+
+   
+
+9. 
+
+   
+
+10. 
+
+    
+
+11. 
+
+    
+
+12. 
+
+    
+
+13. 
 
 
 
