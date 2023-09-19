@@ -700,8 +700,7 @@ help **命令只能用于内建命令的帮助信息查询**
    这是一个包含每个用户基本信息的文本文件。当我们在系统中创建一个用户，新用户的详细信息就会被添加到这个文件中。
    
    `/etc/passwd` 文件将每个用户的基本信息记录为文件中的一行，一行中包含 7 个字段。
-   ![](pics\user&group\des_of_user.jpeg)
-   
+   <img src="pics\user&group\des_of_user.jpeg"/>
    ```latex
    justin:x:1001:1001::/home/justin:/bin/sh
    ```
@@ -791,8 +790,8 @@ help **命令只能用于内建命令的帮助信息查询**
      
    + 用户组的创建，配置，删除
      
-     ![](pics\user&group\usergp.png)
-     
+  
+     <img src="pics\user&group\usergp.png"/>
      
    + 
    
