@@ -390,7 +390,7 @@ GNU/Linux是主要服务于服务器的的操作系统，一般来说是不太�
 多数情况来说它是一台电脑，一台性能，配置各方面都是非常顶级的电脑。
 根据不同的应用场景呢，所在意的点也不一样，比如我们学院的服务器。
 主要用于跑很多机器学习，深度学习，神经网络等的代码，
-所以我们学院的某台服务器据说是配备了4张A100:star2:
+所以我们学院的某台服务器据说是配备了6张A100:star2:
 
 emm，扯远了，服务器大致就是提供服务的机器，根据不同的应用场景，
 
@@ -473,13 +473,12 @@ help **命令只能用于内建命令的帮助信息查询**
    help: help [-dms] [模式 ...]
    	%此处我们可以看到说help的
        显示内建命令的相关信息。
-       
+   
    ```latex
    julie@julie-VirtualBox:~$ help help
    help: help [-dms] [模式 ...]
    	%此处我们可以看到说help的
        显示内建命令的相关信息。
-       
        显示内建命令的简略信息。如果指定了 PATTERN 模式，
        给出所有匹配 PATTERN 模式的命令的详细帮助，否则打
        印一个帮助主题列表
@@ -515,12 +514,12 @@ help **命令只能用于内建命令的帮助信息查询**
        entry with a `*'.  An argument of N lists only the last N entries.
    ......
    ```
-
    
-
+   
+   
 2. **帮助密令之 ```--help```**
 
-   当我们想知道某些外部密令的时候，可以使用 --help来获取其用法
+   当我们想知道某些**外部密令或者内建密令**的时候，可以使用 **--help**来获取其用法
 
    其使用格式为：```command --help```
 
@@ -548,30 +547,16 @@ help **命令只能用于内建命令的帮助信息查询**
    %注意此处表示ls支持 --help参数
          --help		显示此帮助信息并退出
          --version		显示版本信息并退出
-   
-   The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
-   Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
-   
-   使用色彩来区分文件类型的功能已被禁用，默认设置和 --color=never 同时禁用了它。
-   使用 --color=auto 选项，ls 只在标准输出被连至终端时才生成颜色代码。
-   LS_COLORS 环境变量可改变此设置，可使用 dircolors 命令来设置。
-   
-   退出状态：
-    0  正常
-    1  一般问题 (例如：无法访问子文件夹)
-    2  严重问题 (例如：无法使用命令行参数)
    ```
-
+   
    内建密令也可以使用 --help展示其用法
-
+   
    ```latex
    julie@julie-VirtualBox:~$ cd --help
    cd: cd [-L|[-P [-e]] [-@]] [目录]
        改变 shell 工作目录。
-       
        改变当前目录至 DIR 目录。默认的 DIR 目录是 shell 变量 HOME
        的值。
-       
        变量 CDPATH 定义了含有 DIR 的目录的搜索路径，其中不同的目录名称由冒号 (:)分隔。
        一个空的目录名称表示当前目录。如果要切换到的 DIR 由斜杠 (/) 开头，则 CDPATH
        变量不会被使用。
@@ -583,21 +568,9 @@ help **命令只能用于内建命令的帮助信息查询**
            -L	强制跟随符号链接: 在处理 `..' 之后解析 DIR 中的符号链接。
            -P	使用物理目录结构而不跟随符号链接: 在处理 `..' 之前解析 DIR 中的符号链接。
            -e	如果使用了 -P 参数，但不能成功确定当前工作目录时，返回非零的返回值。
-           -@	在支持拓展属性的系统上，将一个有这些属性的文件当作有文件属性的目录。
-       
-       默认情况下跟随符号链接，如同指定 `-L'。
-       `..' 使用移除向前相邻目录名成员直到 DIR 开始或一个斜杠的方式处理。
-       
-       退出状态：
-       如果目录改变，或在使用 -P 选项时 $PWD 修改成功时返回 0，否则非零。
-   julie@julie-VirtualBox:~$ exit --help
-   exit: exit [n]
-       退出shell。
-       
-       以状态 N 退出 shell。  如果 N 被省略，则退出状态
-       为最后一个执行的命令的退出状态。
+   ......
    ```
-
+   
 3. 帮助密令之man
 
    ```latex
@@ -613,36 +586,26 @@ help **命令只能用于内建命令的帮助信息查询**
     主要运行模式：
      -f, --whatis               等同于 whatis
      -k, --apropos              等同于 apropos
-     -K, --global-apropos       在所有页面中搜索文字
-     -l, --local-file
                                 把“手册页”参数当成本地文件名来解读
    ......
      -V, --version              打印程序版本
-   
    ```
 
 
    ```latex
-   %man ls
+   %	man ls
    LS(1)                                                            User Commands                                                            LS(1)
    
-   NAME%
+   NAME%名称
           ls - list directory contents
-   
-   SYNOPSIS%
+   SYNOPSIS%概要
           ls [OPTION]... [FILE]...
-   
-   DESCRIPTION%
+   DESCRIPTION%描述
           List  information  about  the  FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is
           specified.
-   
           Mandatory arguments to long options are mandatory for short options too.
-   
           -a, --all
                  do not ignore entries starting with .
-   
-          -A, --almost-all
-                 do not list implied . and ..
    ......
       Exit status:
           0      if OK,
@@ -651,24 +614,16 @@ help **命令只能用于内建命令的帮助信息查询**
    
           2      if serious trouble (e.g., cannot access command-line argument).
    
-   AUTHOR%
+   AUTHOR%作者
           Written by Richard M. Stallman and David MacKenzie.
    
-   REPORTING BUGS%
+   REPORTING BUGS%反馈bug
           GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
           Report ls translation bugs to <http://translationproject.org/team/>
    
-   COPYRIGHT%
+   COPYRIGHT%版权
           Copyright © 2017 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-          This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
-   
-   SEE ALSO%
-          Full documentation at: <http://www.gnu.org/software/coreutils/ls>
-          or available locally via: info '(coreutils) ls invocation'
-   
-   GNU coreutils 8.28                                                January 2018                                                            LS(1)
-   
-   
+   ......
    ```
 
    
@@ -678,14 +633,177 @@ help **命令只能用于内建命令的帮助信息查询**
 
 4. 帮助密令之info
    
+   
+   
 5. 常用密令之cd，ls，cp，mv，
    
-6. 
-
+   + cd，改变路径
+     ```latex
+     %    选项：
+     %      -d	输出每个主题的简短描述
+     julie@julie-VirtualBox:~$ help -d cd
+     cd - Change the shell working directory.
+     
+     ```
+     
+     ```latex
+     %cd #切换至用户的home目录
+     julie@julie-VirtualBox:/etc$ cd
+     julie@julie-VirtualBox:~$ ls
+     snap  公共的  视频  文档  音乐
+     test  模板    图片  下载  桌面
+     %	cd .. #切换至上一级目录
+     %	pwd 打印当前工作目录
+     julie@julie-VirtualBox:~/test$ pwd 
+     /home/julie/test
+     julie@julie-VirtualBox:~/test$ cd ..
+     julie@julie-VirtualBox:~$ pwd
+     /home/julie
+     ```
+     
+     
+     
+   + 
+     
+   + 
+     
+   + 
+     
+   + 
+     
+   + 
    
-
+   + 
    
+   + 
+   
+   
+   
+6. 用户与用户组
 
+   > Linux系统是一个多用户多任务的分时操作系统，任何一个要使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以这个账号的身份进入系统。
+   >
+   > 用户的账号一方面可以帮助系统管理员对使用系统的用户进行跟踪，并控制他们对系统资源的访问；另一方面也可以帮助用户组织文件，并为用户提供安全性保护。
+   >
+   > 每个用户账号都拥有一个唯一的用户名和各自的口令。
+   >
+   > 用户在登录时键入正确的用户名和口令后，就能够进入系统和自己的主目录。
+   >
+   > 实现用户账号的管理，要完成的工作主要有如下几个方面：
+   >
+   > 1:用户账号的添加、删除与修改。
+   > 2:用户口令的管理。
+   > 3:用户组的管理。
+   
+   大家都知道，Linux 系统中用户信息存放在 `/etc/passwd` 文件中。
+   
+   这是一个包含每个用户基本信息的文本文件。当我们在系统中创建一个用户，新用户的详细信息就会被添加到这个文件中。
+   
+   `/etc/passwd` 文件将每个用户的基本信息记录为文件中的一行，一行中包含 7 个字段。
+   ![](pics\user&group\des_of_user.jpeg)
+   
+   ```latex
+   justin:x:1001:1001::/home/justin:/bin/sh
+   ```
+   
+   `/etc/passwd` 文件的一行代表一个单独的用户。该文件将用户的信息分为 3 个部分。
+   
+   
+   + 用户的创建，配置密码，删除
+     	
+   
+     1. 创建：``useradd 选项 用户名``
+   
+        ```latex
+        %创建名叫testuser的新用户，且为其创建用户主目录为/home/testuser
+        %尝试使用useradd --help了解用法，但常规的添加用户，一般使用如下方式即可
+        useradd -d /home/testuser -m testuser
+        
+        julie@julie-VirtualBox:/home$ ls
+        julie  justin  testuser
+        ```
+     
+        :exclamation::创建用户时，要使用sudo权限
+        ```latex
+        julie@julie-VirtualBox:/$ 
+        julie@julie-VirtualBox:/$ useradd -d /home/testuser -m testuser
+        useradd: Permission denied.
+        useradd：无法锁定 /etc/passwd，请稍后再试。
+        julie@julie-VirtualBox:/$ sudo useradd -d /home/testuser -m testuser
+        julie@julie-VirtualBox:/$ awk -F':' '{ print $1}' /etc/passwd #查看已存在用户
+        root
+        daemon
+        bin
+        sys
+        ...
+        gdm
+        julie
+        vboxadd
+        cups-pk-helper
+        justin
+        testuser %我们刚创建的testuser
+        ```
+     
+     2. 配置密码``passwd 选项 用户名``
+        ```latex
+        sudo passwd testuser
+        ```
+     
+     3. 修改
+     
+        
+   
+     4. 
+     
+        
+     
+        删除``userdel 选项 用户名``
+   
+        ```latex
+        julie@julie-VirtualBox:/home$ sudo userdel -r testuser #用户的主目录一起删除。
+        userdel: testuser 邮件池 (/var/mail/testuser) 未找到
+        julie@julie-VirtualBox:/home$ ls
+        julie  justin
+        julie@julie-VirtualBox:/home$ cat /etc/pqsswd
+        ......
+        julie:x:1000:1000:julie,,,:/home/julie:/bin/bash
+        vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+        cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+        justin:x:1001:1001::/home/justin:/bin/sh
+        
+        ```
+     
+        
+        
+     
+     5. 查看当前已经拥有的账户名:```awk -F':' '{ print $1}' /etc/passwd```
+     
+     ```latex
+     julie@julie-VirtualBox:/home$ cat /etc/pqsswd
+     ......
+     julie:x:1000:1000:julie,,,:/home/julie:/bin/bash
+     vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+     cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+     justin:x:1001:1001::/home/justin:/bin/sh
+     ```
+     
+     
+     
+   + 用户组的创建，配置，删除
+     
+     ![](pics\user&group\usergp.png)
+     
+     
+   + 
+   
+   
+   
+   
+   
+   
+   
+   
+   
 7. 
 
    
