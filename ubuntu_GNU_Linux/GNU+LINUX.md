@@ -647,7 +647,7 @@ help **命令只能用于内建命令的帮助信息查询**
      ```
      
      ```latex
-     %cd #切换至用户的home目录
+     %	cd #切换至用户的home目录
      julie@julie-VirtualBox:/etc$ cd
      julie@julie-VirtualBox:~$ ls
      snap  公共的  视频  文档  音乐
@@ -659,19 +659,100 @@ help **命令只能用于内建命令的帮助信息查询**
      julie@julie-VirtualBox:~/test$ cd ..
      julie@julie-VirtualBox:~$ pwd
      /home/julie
+     %	cd 目标目录
+     julie@julie-VirtualBox:~$ cd /var/log
+     julie@julie-VirtualBox:/var/log$ pwd
+     /var/log
      ```
      
      
      
-   + 
+   + ls
+     ```latex
+     %List information about the FILEs (the current directory by default).
+     %Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+     % 使用ls --help解锁更多用法
+     julie@julie-VirtualBox:/$ ls
+     bin    initrd.img      mnt   snap      var
+     boot   initrd.img.old  opt   srv       vmlinuz
+     cdrom  lib             proc  swapfile  vmlinuz.old
+     dev    lib64           root  sys
+     etc    lost+found      run   tmp
+     home   media           sbin  usr
+     %	ls -a -a, --all			不隐藏任何以. 开始的项目
+     %	ls -l	  -l				使用较长格式列出信息
+     julie@julie-VirtualBox:~/test$ ls -al
+     总用量 16
+     drwxrwxr-x  3 julie julie 4096 9月  16 22:10 .
+     drwxr-xr-x 17 julie julie 4096 9月  20 17:03 ..
+     lrwxrwxrwx  1 julie julie    7 9月  16 22:10 j.sh -> test.sh
+     drwxrwxr-x  2 julie julie 4096 9月  16 22:03 src
+     -rwxrwxrwx  1 julie julie   20 9月  16 12:31 test.sh
+     %	ls +指定目录
+     julie@julie-VirtualBox:~$ ls -al /var/log
+     总用量 4312
+     drwxrwxr-x  11 root              syslog             4096 9月  20 17:08 .
+     drwxr-xr-x  14 root              root               4096 4月  27  2018 ..
+     -rw-r--r--   1 root              root              15415 9月  16 12:31 alternatives.log
+     -rw-r--r--   1 root              root              27420 9月  15 23:10 alternatives.log.1
+     -rw-r-----   1 root              adm                   0 9月  15 23:10 apport.log
+     ......
+     ```
      
-   + 
+   + cp
+     ```latex
+     %将源复制到目标目录，或将多个源复制到目录。
+     %	cp 已存在文件 目标文件
+     %	cp test.sh testcp.sh
+     julie@julie-VirtualBox:~/test$ ls
+     j.sh  src  test.sh
+     julie@julie-VirtualBox:~/test$ cp test.sh testcp.sh
+     julie@julie-VirtualBox:~/test$ ls
+     j.sh  src  testcp.sh  test.sh
+     %	cp 已存在文件 目标文件
+     julie@julie-VirtualBox:~$ cp test/test.sh /test.sh
+     cp: 无法创建普通文件'/test.sh': 权限不够
+     julie@julie-VirtualBox:~$ sudo cp test/test.sh /test.sh
+     [sudo] julie 的密码： 
+     julie@julie-VirtualBox:~$ cd /
+     julie@julie-VirtualBox:/$ ls
+     bin    etc             lib         mnt   run   swapfile  usr
+     boot   home            lib64       opt   sbin  sys       var
+     cdrom  initrd.img      lost+found  proc  snap  test.sh   vmlinuz
+     dev    initrd.img.old  media       root  srv   tmp       vmlinuz.old
+     %使用cp --help解锁更多使用方法
      
-   + 
+     ```
      
-   + 
+   + mv
      
+     ```latex
+     %julie@julie-VirtualBox:~$ mv --help
+     %用法：mv [选项]... [-T] 源文件 目标文件
+     　%或：mv [选项]... 源文件... 目录
+     　%或：mv [选项]... -t 目录 源文件...
+     %Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+     % mv 某存在文件名 想更改的文件名 
+     julie@julie-VirtualBox:~$ ls
+     snap  test  公共的  模板  视频  图片  文档  下载  音乐  桌面
+     julie@julie-VirtualBox:~$ mv test renametest
+     julie@julie-VirtualBox:~$ ls
+     renametest  snap  公共的  模板  视频  图片  文档  下载  音乐  桌面
+     
+     % mv 某存在的文件 目标目录
+     julie@julie-VirtualBox:~/renametest$ vim test.py
+     julie@julie-VirtualBox:~/renametest$ ls
+     src  testcp.sh  test.py  test.sh
+     julie@julie-VirtualBox:~/renametest$ cp test.py ../
+     julie@julie-VirtualBox:~/renametest$ ls ..
+     renametest  snap  test.py  公共的  模板  视频  图片  文档  下载  音乐  桌面
+     ```
+   
    + 
+   
+   + 
+   
+     
    
    + 
    
@@ -774,7 +855,6 @@ help **命令只能用于内建命令的帮助信息查询**
      
         
         
-     
      5. 查看当前已经拥有的账户名:```awk -F':' '{ print $1}' /etc/passwd```
      
      ```latex
@@ -790,8 +870,8 @@ help **命令只能用于内建命令的帮助信息查询**
      
    + 用户组的创建，配置，删除
      
-  
-     <img src="pics\user&group\usergp.png"/>
+     
+    <img src="pics\user&group\usergp.png"/>
      
    + 
    
