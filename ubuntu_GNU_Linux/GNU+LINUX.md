@@ -65,20 +65,20 @@ Linux justin-labtop 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu 
      我这边使用的是https://www.virtualbox.org/wiki/Download_Old_Builds_6_1
 
      ​         6.1.40（教程使用为：windows hosts），小伙伴们可以根据自己的操作系统进行选择。
-     <img src="pics\pics\image-20230813135244431.png" alt="image-20230813135244431" style="zoom: 33%;" />
+     <img src="pics\installation\ins\image-20230813135244431.png" alt="image-20230813135244431" style="zoom: 33%;" />
 
      双击下载完成的.exe安装:
 
-<img src="pics\pics\image-20230813140458186.png" alt="image-20230813140458186" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813140458186.png" alt="image-20230813140458186" style="zoom: 33%;" />
 
-<img src="pics\pics\image-20230813140534553.png" alt="image-20230813140534553" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813140534553.png" alt="image-20230813140534553" style="zoom: 33%;" />
 
 1. 下载Ubuntu iso文件
    本人学习过程中使用的为ubuntu 18.04
    大家可以根据自己的需要安装不通的版本
 
 [ubuntu阿里云](http://mirrors.aliyun.com/oldubuntu-releases/releases/?spm=a2c6h.25603864.0.0.5ee66f0fOBy7kn "Ubuntu阿里云镜像源")
-<img src="pics\pics\image-20230813135918856.png" alt="image-20230813135918856" style="zoom: 25%;" />
+<img src="pics\installation\ins\image-20230813135918856.png" alt="image-20230813135918856" style="zoom: 25%;" />
 
 点击新建：并配置文件所在目录
 名称：自己取（英文）
@@ -88,108 +88,108 @@ Linux justin-labtop 6.2.0-26-generic #26~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu 
 
 
 
-<img src="pics\pics\image-20230813140821651.png" style="zoom:33%;" />
+<img src="pics\installation\ins\image-20230813140821651.png" style="zoom:33%;" />
 
 内存大小一般可设置为3G或者4G
 
 
 
-<img src="pics\pics\image-20230813140927610.png" alt="image-20230813140927610" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813140927610.png" alt="image-20230813140927610" style="zoom: 50%;" />
 后面的操作基本就是下一步：
 
-<img src="pics\pics\image-20230813141003333.png" alt="image-20230813141003333" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813141003333.png" alt="image-20230813141003333" style="zoom: 50%;" />
 下一步
 
-<img src="pics\pics\image-20230813141020403.png" alt="image-20230813141020403" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813141020403.png" alt="image-20230813141020403" style="zoom: 50%;" />
 :warning::动态分配！
 
-<img src="pics\pics\image-20230813141033414.png" alt="image-20230813141033414" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813141033414.png" alt="image-20230813141033414" style="zoom: 50%;" />
 
 一般设置为20G，基本够用了
 
-<img src="pics\pics\image-20230813141056309.png" alt="image-20230813141056309" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813141056309.png" alt="image-20230813141056309" style="zoom: 50%;" />
 启动！
 
-<img src="pics\pics\image-20230813141117125.png" alt="image-20230813141117125" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813141117125.png" alt="image-20230813141117125" style="zoom: 33%;" />
 选择一个虚拟光盘文件
 
-<img src="pics\pics\image-20230813141157590.png" alt="image-20230813141157590" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141157590.png" alt="image-20230813141157590" style="zoom:50%;" />
 
 选择下载好的iso文件
 
-<img src="pics\pics\image-20230813141228907.png" alt="image-20230813141228907" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813141228907.png" alt="image-20230813141228907" style="zoom: 33%;" />
 
 选择
 
-<img src="pics\pics\image-20230813141302172.png" alt="image-20230813141302172" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813141302172.png" alt="image-20230813141302172" style="zoom: 33%;" />
 启动！
 
-<img src="pics\pics\image-20230813141316200.png" alt="image-20230813141316200" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141316200.png" alt="image-20230813141316200" style="zoom:50%;" />
 
 中文简体+安装ubuntu
 
-<img src="pics\pics\image-20230813141624788.png" alt="image-20230813141624788" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141624788.png" alt="image-20230813141624788" style="zoom:50%;" />
 
 汉语
 
-<img src="pics\pics\image-20230813141654299.png" alt="image-20230813141654299" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141654299.png" alt="image-20230813141654299" style="zoom:50%;" />
 
 最小安装！
 
-<img src="pics\pics\image-20230813141757260.png" alt="image-20230813141757260" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141757260.png" alt="image-20230813141757260" style="zoom:50%;" />
 
 现在安装
 
-<img src="pics\pics\image-20230813141830739.png" alt="image-20230813141830739" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141830739.png" alt="image-20230813141830739" style="zoom:50%;" />
 
 继续
 
-<img src="pics\pics\image-20230813141854922.png" alt="image-20230813141854922" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141854922.png" alt="image-20230813141854922" style="zoom:50%;" />
 
 设置位置时区
 
-<img src="pics\pics\image-20230813141919407.png" alt="image-20230813141919407" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813141919407.png" alt="image-20230813141919407" style="zoom:50%;" />
 
 创建用户密码
 
-<img src="pics\pics\image-20230813142004619.png" alt="image-20230813142004619" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813142004619.png" alt="image-20230813142004619" style="zoom:50%;" />
 
 等待安装
 
-<img src="pics\pics\image-20230813142018983.png" alt="image-20230813142018983" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813142018983.png" alt="image-20230813142018983" style="zoom:50%;" />
 
 安装完成，重启！
 
-<img src="pics\pics\image-20230813142907632.png" alt="image-20230813142907632" style="zoom: 50%;" />
+<img src="pics\installation\ins\image-20230813142907632.png" alt="image-20230813142907632" style="zoom: 50%;" />
 
 输入密码登录账户
 
-<img src="pics\pics\image-20230813143016923.png" alt="image-20230813143016923" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143016923.png" alt="image-20230813143016923" style="zoom:50%;" />
 
 不升级
-<img src="pics\pics\image-20230813143422911.png" alt="image-20230813143422911" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143422911.png" alt="image-20230813143422911" style="zoom:50%;" />
 稍后提醒
-<img src="pics\pics\image-20230813143520039.png" alt="image-20230813143520039" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143520039.png" alt="image-20230813143520039" style="zoom:50%;" />
 
 鼠标右键打开终端或者ctrl+alt+t
 
-<img src="pics\pics\image-20230813143627397.png" alt="image-20230813143627397" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143627397.png" alt="image-20230813143627397" style="zoom:50%;" />
 
 输入`uname -a`,即可看到我们的版本信息
 
-<img src="pics\pics\image-20230813143721885.png" alt="image-20230813143721885" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143721885.png" alt="image-20230813143721885" style="zoom:50%;" />
 
 设备:soon::安装增强功能
 
-<img src="pics\pics\image-20230813143835598.png" alt="image-20230813143835598" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813143835598.png" alt="image-20230813143835598" style="zoom:50%;" />
 
 运行！
 
-<img src="pics\pics\image-20230813144047231.png" alt="image-20230813144047231" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813144047231.png" alt="image-20230813144047231" style="zoom:50%;" />
 
 按下回车
 
-<img src="pics\pics\image-20230813144134476.png" alt="image-20230813144134476" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813144134476.png" alt="image-20230813144134476" style="zoom:50%;" />
 此处提示我们需要安装gcc make perl
 于是我们在终端中输入如下命令，并按下回车
 
@@ -198,26 +198,26 @@ sudo apt-get update
 sudo apt-get install gcc make perl
 ```
 
-<img src="pics\pics\image-20230813151911578.png" alt="image-20230813151911578" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813151911578.png" alt="image-20230813151911578" style="zoom:50%;" />
 
 双击桌面的光盘图标文件，点击运行软件
 
-<img src="pics\pics\image-20230813152029768.png" alt="image-20230813152029768" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813152029768.png" alt="image-20230813152029768" style="zoom:50%;" />
 
 
 
 打开终端输入`reboot` 重启
-<img src="pics\pics\image-20230813144242508.png" alt="image-20230813144242508" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813144242508.png" alt="image-20230813144242508" style="zoom:50%;" />
 
 
 此时我们便可以调整我们的窗口大小
 
-<img src="pics\pics\image-20230813144435889.png" alt="image-20230813144435889" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813144435889.png" alt="image-20230813144435889" style="zoom:50%;" />
 
 
 
 设置共享粘贴板双向
-<img src="pics\pics\image-20230813152308953.png" alt="image-20230813152308953" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813152308953.png" alt="image-20230813152308953" style="zoom:50%;" />
 
 ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
 
@@ -229,11 +229,11 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
   0. 在已有的windows下去安装Linux，操作也很简单，Ubuntu安装基本也是下一步，下一步......
 
   我的双系统如下，本着认真负责的态度，我再给大家介绍一下如何在windows的基础上去安装ubuntu22.04Lts
-  <img src="pics\pics\image-20230813152809103.png" alt="image-20230813152809103" style="zoom:50%;" />
+  <img src="pics\installation\ins\image-20230813152809103.png" alt="image-20230813152809103" style="zoom:50%;" />
 
   使用DiskGenius删除我原来的Ubuntu22.04lts，右键开始找到磁盘管理，自行准备大概100G或者150G或者根据你自己的需求进行划分，我这里就是用我未分配的空间（未分配需要你自己从原来的磁盘压缩，），网上大多数都是100G，大家可自行斟酌。
 
-  <img src="pics\pics\image-20230813172749748.png" alt="image-20230813172749748" style="zoom:50%;" />
+  <img src="pics\installation\ins\image-20230813172749748.png" alt="image-20230813172749748" style="zoom:50%;" />
 
   emmm还是说一下分盘的一些常识：
   从左往右:C,D,我们买来的新电脑经常会由厂商帮助我们分好盘，不过现在大家动不动就是1t，正常使用的情况，根本不用担心C盘爆满，而且盘符的读写速度会随着你从左往右下降，C盘的读写速度是最快的，但是一般来说感知不明显，但是你玩一些大型游戏放在移动硬盘和C盘应该就会有明显的感觉。<br>
@@ -242,35 +242,35 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
   :exclamation:注意扩展只能相邻扩展，不能跨盘符扩展，比如我上面的156.57GB就不能直接扩展到C盘，只能扩展到D盘。
 
 
-<img src="pics\pics\image-20230813175310881.png" alt="image-20230813175310881" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813175310881.png" alt="image-20230813175310881" style="zoom:50%;" />
 
 将之前的未分配区域扩展到D盘
 
-<img src="pics\pics\image-20230813180308341.png" alt="image-20230813180308341" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813180308341.png" alt="image-20230813180308341" style="zoom:50%;" />
 
 右键D盘，点击压缩卷，
 
-<img src="pics\pics\image-20230813180753006.png" alt="image-20230813180753006" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813180753006.png" alt="image-20230813180753006" style="zoom:50%;" />
 
 我们在这里压缩1024 x 150 = 153600MB，点击压缩
 
-<img src="pics\pics\image-20230813180930000.png" alt="image-20230813180930000" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813180930000.png" alt="image-20230813180930000" style="zoom:50%;" />
 
 压缩完成：
-<img src="pics\pics\image-20230813181152999.png" alt="image-20230813181152999" style="zoom:50%;" />
+<img src="pics\installation\ins\image-20230813181152999.png" alt="image-20230813181152999" style="zoom:50%;" />
 
 1. 制作启动盘
 
    一个大小8G以上的U盘，16，32都行
    使用工具：[Rufus](https://rufus.ie/zh/)
 
-   <img src="pics\pics\image-20230813181436496.png" alt="image-20230813181436496" style="zoom:50%;" />
+   <img src="pics\installation\ins\image-20230813181436496.png" alt="image-20230813181436496" style="zoom:50%;" />
 
    先将空U盘插入电脑，Rufus下载完成后，直接双击启动镜像文件可以选择你下载好的镜像文件，我建议你使用22.04lts
    [Ubuntu22.04Lts](http://mirrors.aliyun.com/oldubuntu-releases/releases/22.04.1/?spm=a2c6h.25603864.0.0.41457ff3wmSZVM "ubuntu22.04")(阿里云下载)
    
 
-<img src="pics\pics\image-20230813203931260.png" alt="image-20230813203931260" style="zoom: 33%;" />
+<img src="pics\installation\ins\image-20230813203931260.png" alt="image-20230813203931260" style="zoom: 33%;" />
 
 文件系统选择默认即可。然后点击开始，下面进度条显示完成之后我们就完成了启动盘的制作。
 
@@ -357,10 +357,10 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
     Table source:[GUI&CUI](https://geek-docs.com/operating-system/os-ask-answer/whats-the-difference-between-gui-and-cui.html "GUI&CUI")
     🌰：
     GUI::framed_picture:
-    <img src="pics/image-20230813001315495.png" alt="image-20230813001315495" style="zoom:25%;" />
+    <img src="pics/files/image-20230813001315495.png" alt="image-20230813001315495" style="zoom:25%;" />
 
     CUI::black_medium_square:
-    <img src="pics/image-20230813001412011.png" alt="image-20230813001412011" style="zoom:50%;" />
+    <img src="pics/files/image-20230813001412011.png" alt="image-20230813001412011" style="zoom:50%;" />
 
     
 
@@ -373,7 +373,7 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
 
    :question::当你看到这里的时候，可能会有一些不知所措，这里面的文件都是什么？
 
-   [![](pics/file_struct.jpeg)](https://cn.bing.com/images/search?view=detailV2&ccid=MG44P%2FUt&id=817701BE773A33A08EDE45C4830641F9B52A5538&thid=OIP-C.MG44P_Ut1K8z-DKuB40FbAHaEi&mediaurl=https%3A%2F%2Fts1.cn.mm.bing.net%2Fth%2Fid%2FR-C.306e383ff52dd4af33f832ae078d056c%3Frik%3DOFUqtflBBoPERQ%26riu%3Dhttp%253a%252f%252fstatic.oschina.net%252fuploads%252fimg%252f201407%252f13012401_WCtc.jpg%26ehk%3Df3lvuFPzO%252bSFhgi80TapEZJswe4Sa6fKA99Jb6X3n0w%253d%26risl%3D%26pid%3DImgRaw%26r%3D0&exph=456&expw=744&q=linux%e6%96%87%e4%bb%b6%e7%bb%93%e6%9e%84&simid=608024978603727909&form=IRPRST&ck=F537326F3CF646384A4E26BBBA15E120&selectedindex=3&ajaxhist=0&ajaxserp=0&vt=0&sim=11 "filestruct")
+   [![](pics/files/file_struct.jpeg)](https://cn.bing.com/images/search?view=detailV2&ccid=MG44P%2FUt&id=817701BE773A33A08EDE45C4830641F9B52A5538&thid=OIP-C.MG44P_Ut1K8z-DKuB40FbAHaEi&mediaurl=https%3A%2F%2Fts1.cn.mm.bing.net%2Fth%2Fid%2FR-C.306e383ff52dd4af33f832ae078d056c%3Frik%3DOFUqtflBBoPERQ%26riu%3Dhttp%253a%252f%252fstatic.oschina.net%252fuploads%252fimg%252f201407%252f13012401_WCtc.jpg%26ehk%3Df3lvuFPzO%252bSFhgi80TapEZJswe4Sa6fKA99Jb6X3n0w%253d%26risl%3D%26pid%3DImgRaw%26r%3D0&exph=456&expw=744&q=linux%e6%96%87%e4%bb%b6%e7%bb%93%e6%9e%84&simid=608024978603727909&form=IRPRST&ck=F537326F3CF646384A4E26BBBA15E120&selectedindex=3&ajaxhist=0&ajaxserp=0&vt=0&sim=11 "filestruct")
 
    
 
@@ -632,12 +632,49 @@ help **命令只能用于内建命令的帮助信息查询**
 
 
 4. 帮助密令之info
+
+   
+
+5. 常用密令之cat mkdir，cd，ls，cp，mv，rm，grep
    
    
    
-5. 常用密令之cd，ls，cp，mv，
-   
+   + cat
+     
+     
+     ```latex
+     ```
+     
+     
+     
+   + mkdir
+     
+     ```latex
+     julie@julie-VirtualBox:~/renametest$ mkdir --help
+     用法：mkdir [选项]... 目录...
+     Create the DIRECTORY(ies), if they do not already exist.
+     %	mkdir	testdir 创建文件夹
+     julie@julie-VirtualBox:~/renametest$ ls
+     testcp.sh
+     julie@julie-VirtualBox:~/renametest$ mkdir testdir
+     julie@julie-VirtualBox:~/renametest$ ls
+     testcp.sh  testdir
+     %	mkdir -p test/lss 创建带有父目录的文件夹
+     
+     julie@julie-VirtualBox:~/renametest$ mkdir test/lss
+     mkdir: 无法创建目录"test/lss": 没有那个文件或目录
+     julie@julie-VirtualBox:~/renametest$ mkdir -p test/lss
+     julie@julie-VirtualBox:~/renametest$ ls
+     test  testcp.sh  testdir
+     julie@julie-VirtualBox:~/renametest$ cd test
+     julie@julie-VirtualBox:~/renametest/test$ ls
+     lss
+     julie@julie-VirtualBox:~/renametest/test$
+     ```
+     
    + cd，改变路径
+     
+     
      ```latex
      %    选项：
      %      -d	输出每个主题的简短描述
@@ -664,8 +701,6 @@ help **命令只能用于内建命令的帮助信息查询**
      julie@julie-VirtualBox:/var/log$ pwd
      /var/log
      ```
-     
-     
      
    + ls
      ```latex
@@ -748,11 +783,63 @@ help **命令只能用于内建命令的帮助信息查询**
      renametest  snap  test.py  公共的  模板  视频  图片  文档  下载  音乐  桌面
      ```
    
-   + 
+   + rm
    
-   + 
+     ```latex
+     julie@julie-VirtualBox:/home$ rm --help
+     用法：rm [选项]... [文件]...
+     Remove (unlink) the FILE(s).
+     
+       -f, --force 
+     ......
+     % rm 某文件
+     julie@julie-VirtualBox:~/renametest$ ls
+     src  testcp.sh  test.py
+     julie@julie-VirtualBox:~/renametest$ rm test.py 
+     julie@julie-VirtualBox:~/renametest$ ls
+     src  testcp.sh
+     % rm -r 文件夹
+     julie@julie-VirtualBox:~/renametest$ ls
+     src  testcp.sh
+     julie@julie-VirtualBox:~/renametest$ rm src
+     rm: 无法删除'src': 是一个目录
+     julie@julie-VirtualBox:~/renametest$ rm -r src/
+     % rmdir 空文件夹 删除一个空的目录
+     julie@julie-VirtualBox:~/renametest$ ls
+     src  testcp.sh
+     julie@julie-VirtualBox:~/renametest$ rmdir src
+     julie@julie-VirtualBox:~/renametest$ ls
+     testcp.sh
+     julie@julie-VirtualBox:~/renametest$ 
+     使用rm --help解锁更多知识！
+     ```
+
+   + grep
+     ```latex
+     julie@julie-VirtualBox:~$ grep --help
+     用法: grep [选项]... PATTERN [FILE]...
+     Search for PATTERN in each FILE.
+     Example: grep -i 'hello world' menu.h main.c
+     %	grep 需要查询的内容 目标文件
+     在实际中hello（被查询到的内容）会被突出显示
+     ```
+   
+     ![image-20230922111922694](C:\Users\justin\AppData\Roaming\Typora\typora-user-images\image-20230922111922694.png)
+     ```latex
+     %	grep 需要查询的内容 目标文件1 目标文件2
+     ```
+   
+     ![image-20230922112436939](C:\Users\justin\AppData\Roaming\Typora\typora-user-images\image-20230922112436939.png)
+   
+     ```la
+     grep --help 解锁更多玩法！
+     ```
    
      
+   
+   
+   
+   
    
    + 
    
@@ -775,25 +862,26 @@ help **命令只能用于内建命令的帮助信息查询**
    > 1:用户账号的添加、删除与修改。
    > 2:用户口令的管理。
    > 3:用户组的管理。
-   
+
    大家都知道，Linux 系统中用户信息存放在 `/etc/passwd` 文件中。
-   
+
    这是一个包含每个用户基本信息的文本文件。当我们在系统中创建一个用户，新用户的详细信息就会被添加到这个文件中。
-   
+
    `/etc/passwd` 文件将每个用户的基本信息记录为文件中的一行，一行中包含 7 个字段。
    <img src="pics\user&group\des_of_user.jpeg"/>
+
    ```latex
    justin:x:1001:1001::/home/justin:/bin/sh
    ```
-   
+
    `/etc/passwd` 文件的一行代表一个单独的用户。该文件将用户的信息分为 3 个部分。
-   
-   
+
+
    + 用户的创建，配置密码，删除
      	
-   
+
      1. 创建：``useradd 选项 用户名``
-   
+
         ```latex
         %创建名叫testuser的新用户，且为其创建用户主目录为/home/testuser
         %尝试使用useradd --help了解用法，但常规的添加用户，一般使用如下方式即可
@@ -829,16 +917,58 @@ help **命令只能用于内建命令的帮助信息查询**
         sudo passwd testuser
         ```
      
-     3. 修改
+     3. 修改```usermod 选项 用户名```
+     
+        ```latex
+        julie@julie-VirtualBox:~/renametest$ usermod --help
+        用法：usermod [选项] 登录
+        
+        选项：
+          -c, --comment 注释            GECOS 字段的新值
+          -d, --home HOME_DIR           用户的新主目录
+          -e, --expiredate EXPIRE_DATE  设定帐户过期的日期为 EXPIRE_DATE
+          -f, --inactive INACTIVE       过期 INACTIVE 天数后，设定密码为失效状态
+          -g, --gid GROUP               强制使用 GROUP 为新主组
+          -G, --groups GROUPS           新的附加组列表 GROUPS
+          -a, --append GROUP            将用户追加至上边 -G 中提到的附加组中，
+                                        并不从其它组中删除此用户
+          -h, --help                    显示此帮助信息并推出
+          -l, --login LOGIN             新的登录名称
+          -L, --lock                    锁定用户帐号
+          -m, --move-home               将家目录内容移至新位置 (仅于 -d 一起使用)
+          -o, --non-unique              允许使用重复的(非唯一的) UID
+          -p, --password PASSWORD       将加密过的密码 (PASSWORD) 设为新密码
+          -R, --root CHROOT_DIR         chroot 到的目录
+          -s, --shell SHELL             该用户帐号的新登录 shell
+          -u, --uid UID                 用户帐号的新 UID
+          -U, --unlock                  解锁用户帐号
+          -v, --add-subuids FIRST-LAST  add range of subordinate uids
+          -V, --del-subuids FIRST-LAST  remove range of subordinate uids
+          -w, --add-subgids FIRST-LAST  add range of subordinate gids
+          -W, --del-subgids FIRST-LAST  remove range of subordinate gids
+          -Z, --selinux-user  SEUSER       用户账户的新 SELinux 用户映射
+        
+        ```
+     
+        ```latex
+        justin:x:1001:1001::/home/justin:/bin/sh
+        julie@julie-VirtualBox:/home$ ls
+        julie  justin  newhome
+        julie@julie-VirtualBox:/home$ sudo usermod -d /home/newhome justin
+        julie@julie-VirtualBox:/home$ cat /etc/passwd
+        ......
+        justin:x:1001:1001::/home/newhome:/bin/sh
+        
+        ```
      
         
-   
+     
      4. 
      
         
      
         删除``userdel 选项 用户名``
-   
+     
         ```latex
         julie@julie-VirtualBox:/home$ sudo userdel -r testuser #用户的主目录一起删除。
         userdel: testuser 邮件池 (/var/mail/testuser) 未找到
@@ -850,10 +980,7 @@ help **命令只能用于内建命令的帮助信息查询**
         vboxadd:x:999:1::/var/run/vboxadd:/bin/false
         cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
         justin:x:1001:1001::/home/justin:/bin/sh
-        
         ```
-     
-        
         
      5. 查看当前已经拥有的账户名:```awk -F':' '{ print $1}' /etc/passwd```
      
@@ -871,19 +998,62 @@ help **命令只能用于内建命令的帮助信息查询**
    + 用户组的创建，配置，删除
      
      
+
     <img src="pics\user&group\usergp.png"/>
-     
+
    + 
+
    
+
+7. chmod&chown
+
+   Linux 系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。
+
+   为了保护系统的安全性，Linux 系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。
+
+   在 Linux 中我们通常使用以下两个命令来修改文件或目录的所属用户与权限：
+
+   ![](pics\files\file-llls22.jpg)
+   ```latex
+   julie@julie-VirtualBox:~/renametest$ ls -al
+   总用量 20
+   drwxrwxr-x  3 julie julie 4096 9月  20 17:54 .
+   drwxr-xr-x 17 julie julie 4096 9月  20 18:56 ..
+   drwxrwxr-x  2 julie julie 4096 9月  16 22:03 src
+   -rwxrwxr-x  1 julie julie   20 9月  20 17:19 testcp.sh
+   -rw-rw-r--  1 julie julie   22 9月  20 17:34 test.py
+   %testcp.sh -代表文件，rwx代表用户权限，即julie对该文件可读，写，执行同组用户的也可读，写，执行其他用户只能读和执行，不能写
+   r read
+   w write
+   x execute
+   -代表文件，d代表文件夹
    
+   ```
+
    
-   
-   
-   
-   
-   
-   
-7. 
+
+   + chmod
+     ```latex
+     %Change the mode of each FILE to MODE.
+     %With --reference, change the mode of each FILE to that of RFILE.
+     
+     ```
+
+     
+
+     
+
+   + 
+
+     
+
+   + 
+
+     
+
+   + 
+
+     
 
    
 
