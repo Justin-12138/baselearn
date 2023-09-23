@@ -287,38 +287,39 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
    
 
    
+
 ![](pics\installation\IMG_5264.JPG)
-   
 
-   
 
-   
+
+
+
 ![](pics\installation\IMG_5265.JPG)
-   
 
-   
+
+
 ![](pics\installation\IMG_5266.JPG)
-   
 
-   
+
+
 ![](pics\installation\IMG_5267.JPG)
-   
 
-   
+
+
 ![](pics\installation\IMG_5268.JPG)
-   
+
 ![](pics\installation\IMG_5262.JPG)
-   
+
 ![](pics\installation\IMG_5270.JPG)
-   
 
-   
+
+
 ![](pics\installation\IMG_5271.JPG)
-   
 
-   
+
+
 ![](pics\installation\IMG_5272.JPG)
-   
+
 
 
 
@@ -1027,7 +1028,7 @@ help **命令只能用于内建命令的帮助信息查询**
    ```
 
    + 
-     chmod
+     chmod更改文件权限
 
      ```latex
      %Change the mode of each FILE to MODE.
@@ -1132,6 +1133,67 @@ help **命令只能用于内建命令的帮助信息查询**
      julie@julie-VirtualBox:~/test$ ls -l
      总用量 4
      -r-xrw---- 1 julie julie 58 9月  22 11:21 test.sh
+     
+     ```
+     
+     八进制表示法
+     
+     | 数字 | 权限       | rwx  | 二进制 |
+     | ---- | ---------- | ---- | ------ |
+     | 7    | 读+写+执行 | rwx  | 111    |
+     | 6    | 读+写      | rw-  | 110    |
+     | 5    | 读+执行    | r-x  | 101    |
+     | 4    | 只读       | r--  | 100    |
+     | 3    | 写+执行    | -wx  | 011    |
+     | 2    | 只写       | -w-  | 010    |
+     | 1    | 只执行     | --x  | 001    |
+     | 0    | 无         | ---  | 000    |
+     
+     核心仍然是**改变某用户或者某些用户对某个文件的某权限或某些权限**
+     
+     记忆时候rwx从左到右等级依次增加
+     
+     只需要记住1（执行），2（写），4（读）即可
+     
+     3=2+1（写+执行）
+     
+     5=4+1（读+执行）
+     
+     6=4+2（读+写）
+     
+     7=4+2+1（读+写+执行）
+     
+     ```latex
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxrwxrwx 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ chmod 751 test.sh 
+     %751,分别代表u g o的权限
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr-x--x 1 julie julie 58 9月  22 11:21 test.sh
+     ```
+     
+     对文件夹
+     ```latex
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     %此时tesdir无任何权限
+     d--------- 2 julie julie 4096 9月  23 11:04 tesdir
+     -rwxr-x--x 1 julie julie   58 9月  22 11:21 test.sh
+     %无法进入
+     julie@julie-VirtualBox:~/test$ cd tesdir/
+     bash: cd: tesdir/: 权限不够
+     %添加可执行权限，可以进入
+     julie@julie-VirtualBox:~/test$ chmod u+x tesdir/
+     julie@julie-VirtualBox:~/test$ cd tesdir/
+     %无可读权限
+     julie@julie-VirtualBox:~/test/tesdir$ ls
+     ls: 无法打开目录'.': 权限不够 %chmod u+r tesdir/
+     julie@julie-VirtualBox:~/test/tesdir$ cd ..
+     %无可写权限
+     julie@julie-VirtualBox:~/test$ cp test.sh tesdir/
+     cp: 无法创建普通文件'tesdir/test.sh': 权限不够 %chmod u+w tesdir/
      
      ```
      
