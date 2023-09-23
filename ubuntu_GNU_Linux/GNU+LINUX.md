@@ -241,7 +241,6 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
   再次秉着认真负责的态度，我在这里再向大家展示如何去分盘(先把未分配的区域扩展到D盘)
   :exclamation:注意扩展只能相邻扩展，不能跨盘符扩展，比如我上面的156.57GB就不能直接扩展到C盘，只能扩展到D盘。
 
-
 <img src="pics\installation\ins\image-20230813175310881.png" alt="image-20230813175310881" style="zoom:50%;" />
 
 将之前的未分配区域扩展到D盘
@@ -274,55 +273,56 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
 
 文件系统选择默认即可。然后点击开始，下面进度条显示完成之后我们就完成了启动盘的制作。
 
+1. 将u盘插入电脑，按完开机键后狂按F2（不同电脑不一样，我的时华硕，大家可根据自己的电脑型号去搜索）进入bios，
+   设置启动优先顺序，我们将ubuntu设置为第一个即可
 
+   <img src="pics\installation\IMG_5273.JPG" style="zoom: 25%;" />
 
+2. 回车
 
-
-
-
-1. 
-
-   
-
-2. 
-
-   
-
-   
-
-3. 
-
-   
-
-   
-
-4. 
-
-   
-
-   
-
-5. 
+   ![](pics\installation\IMG_5263.JPG)
 
    
 
    
 
    
+![](pics\installation\IMG_5264.JPG)
+   
 
-6. 
-7. 
-8. 
+   
+
+   
+![](pics\installation\IMG_5265.JPG)
+   
+
+   
+![](pics\installation\IMG_5266.JPG)
+   
+
+   
+![](pics\installation\IMG_5267.JPG)
+   
+
+   
+![](pics\installation\IMG_5268.JPG)
+   
+![](pics\installation\IMG_5262.JPG)
+   
+![](pics\installation\IMG_5270.JPG)
+   
+
+   
+![](pics\installation\IMG_5271.JPG)
+   
+
+   
+![](pics\installation\IMG_5272.JPG)
+   
 
 
 
-- 纯Linux
-
-  
-
-:three::
-
-:four::
+   ![](pics\installation\IMG_5274.JPG)
 
 
 
@@ -626,28 +626,31 @@ help **命令只能用于内建命令的帮助信息查询**
    ......
    ```
 
-   
-
-   
-
 
 4. 帮助密令之info
 
    
 
-5. 常用密令之cat mkdir，cd，ls，cp，mv，rm，grep
+5. 常用密令之cat，mkdir，cd，ls，cp，mv，rm，grep
    
-   
-   
-   + cat
+   + cat 查看文件内容
      
      
      ```latex
+     julie@julie-VirtualBox:~/renametest$ cat --help
+     用法：cat [选项]... [文件]...
+     Concatenate FILE(s) to standard output.
+     %	cat test.sh
+     julie@julie-VirtualBox:~/renametest$ cat test.sh
+     #!/bin/sh
+     #this is test shell script
+     echo "hello,Justin!"
+     %	cat --help 解锁更多玩法
      ```
      
      
      
-   + mkdir
+   + mkdir 创建目录
      
      ```latex
      julie@julie-VirtualBox:~/renametest$ mkdir --help
@@ -672,7 +675,7 @@ help **命令只能用于内建命令的帮助信息查询**
      julie@julie-VirtualBox:~/renametest/test$
      ```
      
-   + cd，改变路径
+   + cd 切换目录
      
      
      ```latex
@@ -702,7 +705,7 @@ help **命令只能用于内建命令的帮助信息查询**
      /var/log
      ```
      
-   + ls
+   + ls 列出文件
      ```latex
      %List information about the FILEs (the current directory by default).
      %Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -734,7 +737,7 @@ help **命令只能用于内建命令的帮助信息查询**
      ......
      ```
      
-   + cp
+   + cp 复制文件
      ```latex
      %将源复制到目标目录，或将多个源复制到目录。
      %	cp 已存在文件 目标文件
@@ -759,7 +762,7 @@ help **命令只能用于内建命令的帮助信息查询**
      
      ```
      
-   + mv
+   + mv 移动和重命名文件
      
      ```latex
      %julie@julie-VirtualBox:~$ mv --help
@@ -783,7 +786,7 @@ help **命令只能用于内建命令的帮助信息查询**
      renametest  snap  test.py  公共的  模板  视频  图片  文档  下载  音乐  桌面
      ```
    
-   + rm
+   + rm 删除
    
      ```latex
      julie@julie-VirtualBox:/home$ rm --help
@@ -813,8 +816,8 @@ help **命令只能用于内建命令的帮助信息查询**
      julie@julie-VirtualBox:~/renametest$ 
      使用rm --help解锁更多知识！
      ```
-
-   + grep
+   
+   + grep 搜索
      ```latex
      julie@julie-VirtualBox:~$ grep --help
      用法: grep [选项]... PATTERN [FILE]...
@@ -836,12 +839,6 @@ help **命令只能用于内建命令的帮助信息查询**
      ```
    
      
-   
-   
-   
-   
-   
-   + 
    
    + 
    
@@ -963,11 +960,7 @@ help **命令只能用于内建命令的帮助信息查询**
      
         
      
-     4. 
-     
-        
-     
-        删除``userdel 选项 用户名``
+     4. 删除``userdel 选项 用户名``
      
         ```latex
         julie@julie-VirtualBox:/home$ sudo userdel -r testuser #用户的主目录一起删除。
@@ -997,11 +990,10 @@ help **命令只能用于内建命令的帮助信息查询**
      
    + 用户组的创建，配置，删除
      
-     
 
     <img src="pics\user&group\usergp.png"/>
 
-   + 
+
 
    
 
@@ -1012,17 +1004,21 @@ help **命令只能用于内建命令的帮助信息查询**
    为了保护系统的安全性，Linux 系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。
 
    在 Linux 中我们通常使用以下两个命令来修改文件或目录的所属用户与权限：
+   chmod和chown
 
    ![](pics\files\file-llls22.jpg)
+
+   :baby_chick:
+
    ```latex
-   julie@julie-VirtualBox:~/renametest$ ls -al
-   总用量 20
-   drwxrwxr-x  3 julie julie 4096 9月  20 17:54 .
-   drwxr-xr-x 17 julie julie 4096 9月  20 18:56 ..
-   drwxrwxr-x  2 julie julie 4096 9月  16 22:03 src
-   -rwxrwxr-x  1 julie julie   20 9月  20 17:19 testcp.sh
-   -rw-rw-r--  1 julie julie   22 9月  20 17:34 test.py
-   %testcp.sh -代表文件，rwx代表用户权限，即julie对该文件可读，写，执行同组用户的也可读，写，执行其他用户只能读和执行，不能写
+   julie@julie-VirtualBox:~/test$ ls -al
+   总用量 12
+   drwxrwxr-x  2 julie julie 4096 9月  23 09:26 .
+   drwxr-xr-x 17 julie julie 4096 9月  23 09:26 .. 
+   -rw-rw-r--  1 julie julie   58 9月  22 11:21 test.sh
+   %test.sh -代表文件，rw-代表用户权限，即julie对该文件可读，写，不可执行。
+   %rw-同组用户的也可读，写，不可执行
+   %r--其他用户只能读不能写，不能执行。
    r read
    w write
    x execute
@@ -1030,19 +1026,119 @@ help **命令只能用于内建命令的帮助信息查询**
    
    ```
 
-   
+   + 
+     chmod
 
-   + chmod
      ```latex
      %Change the mode of each FILE to MODE.
      %With --reference, change the mode of each FILE to that of RFILE.
+     julie@julie-VirtualBox:~/test$ la -al
+     总用量 12
+     drwxrwxr-x  2 julie julie 4096 9月  23 09:26 .
+     drwxr-xr-x 17 julie julie 4096 9月  23 09:26 ..
+     -rw-rw-r--  1 julie julie   58 9月  22 11:21 test.sh %此时我们无可执行权限
+     julie@julie-VirtualBox:~/test$ ./test.sh
+     bash: ./test.sh: 权限不够 %提示我们权限不够
+     %尝试使用bash解释器，解释器会读取文件内容，便可以执行，此时我们只需要有读权限即可。
+     julie@julie-VirtualBox:~/test$ bash test.sh 
+     hello,Justin!
      
      ```
 
-     
+     ```latex
+     %更改文件权限 为文件添加可执行权限
+     %chmod +x test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rw-rw-r-- 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ chmod +x test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxrwxr-x 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ ./test.sh %此时便可执行
+     hello,Justin!
+     ```
 
-     
+     chmod通用格式
 
+     当我们使用ls -l
+
+     总用量 4
+     -rw-rw-r-- 1 julie julie 58 9月  22 11:21 test.sh
+
+     会显示两个julie，第一个代表文件拥有者，owner，第二个代表拥有者所在的用户组，
+
+     我们知道一个文件的权限涉及到，拥有者，拥有者同组用户和其他用户,这三者之和就是所有用户。
+
+     ```latex
+     分别用u,g,o来表示
+     u --user
+     g --group users
+     o --other users
+     a --all users
+     ```
+
+     文件的权限有三种，读，写，执行
+     ```latex
+     分别使用 r,w,x表示
+     r --read
+     w --write
+     x --execute
+     ```
+
+     所以我们常用的方式就是**改变某用户或者某些用户对某个文件的某权限或某些权限**
+     使用如下常用操作符号
+
+     | 符号 | 说明                                                   |
+     | ---- | ------------------------------------------------------ |
+     | +    | 为指定的用户类型增加权限                               |
+     | -    | 为指定的用户类型去除权限                               |
+     | =    | 设置指定用户权限的设置，即将用户类型的所有权限重新设置 |
+
+     ```latex
+     %chmod 用户（+/-/=）相关权限 目标文件
+     %chmod u=rwx,g=rx,o=r test.sh
+     %设置user为rwx，group users为rx，other users为w
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -r-xr----- 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ chmod u=rwx,g=rx,o=r test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr-xr-- 1 julie julie 58 9月  22 11:21 test.sh
+     
+     %为other users添加w权限
+     %chmod o+w test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr-xr-- 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ chmod o+w test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr-xrw- 1 julie julie 58 9月  22 11:21 test.sh
+     
+     %去除group users的x权限
+     %chmod g-x test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr-xrw- 1 julie julie 58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ chmod g-x test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -rwxr--rw- 1 julie julie 58 9月  22 11:21 test.sh
+     %去除u的w权限，为g添加w权限，去除o的rw权限
+     %chmod u-w,g+w,o-rw
+     julie@julie-VirtualBox:~/test$ chmod u-w,g+w,o-rw test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 4
+     -r-xrw---- 1 julie julie 58 9月  22 11:21 test.sh
+     
+     ```
+     
+     :heavy_heart_exclamation::更多详细内容参照[菜鸟教程](更多详细内容参照https://www.runoob.com/linux/linux-comm-chmod.html)
+     
+     
+     
    + 
 
      
