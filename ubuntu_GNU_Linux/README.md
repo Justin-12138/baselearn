@@ -891,26 +891,20 @@ help **命令只能用于内建命令的帮助信息查询**
      
         :exclamation::创建用户时，要使用sudo权限
         ```latex
-        julie@julie-VirtualBox:/$ 
-        julie@julie-VirtualBox:/$ useradd -d /home/testuser -m testuser
-        useradd: Permission denied.
-        useradd：无法锁定 /etc/passwd，请稍后再试。
-        julie@julie-VirtualBox:/$ sudo useradd -d /home/testuser -m testuser
-        julie@julie-VirtualBox:/$ awk -F':' '{ print $1}' /etc/passwd #查看已存在用户
-        root
-        daemon
-        bin
-        sys
-        ...
-        gdm
-        julie
-        vboxadd
-        cups-pk-helper
-        justin
-        testuser %我们刚创建的testuser
+        %justin:x:1001:1001::/home/justin:/bin/sh
+        julie@julie-VirtualBox:~$ sudo useradd -c 'testuser' -g 1000 -d /home/testuser -m -s /bin/bash testuser
+        [sudo] julie 的密码： 
+        julie@julie-VirtualBox:~$ cat /etc/passwd | grep testuser
+        testuser:x:1002:1000:testuser:/home/testuser:/bin/bash
+        用户名:密码:用户ID:用户组ID:描述:home目录:所用shell
+        -c 添加注释
+        -d 指定home目录
+        -m 创建目录
+        -g 指定用户组
+        -s 指定所用shell
         ```
      
-     2. 配置密码``passwd 选项 用户名``
+     2. 配置密码``sudo passwd 选项 用户名``
         ```latex
         sudo passwd testuser
         ```
@@ -920,7 +914,6 @@ help **命令只能用于内建命令的帮助信息查询**
         ```latex
         julie@julie-VirtualBox:~/renametest$ usermod --help
         用法：usermod [选项] 登录
-        
         选项：
           -c, --comment 注释            GECOS 字段的新值
           -d, --home HOME_DIR           用户的新主目录
@@ -930,24 +923,10 @@ help **命令只能用于内建命令的帮助信息查询**
           -G, --groups GROUPS           新的附加组列表 GROUPS
           -a, --append GROUP            将用户追加至上边 -G 中提到的附加组中，
                                         并不从其它组中删除此用户
-          -h, --help                    显示此帮助信息并推出
-          -l, --login LOGIN             新的登录名称
-          -L, --lock                    锁定用户帐号
-          -m, --move-home               将家目录内容移至新位置 (仅于 -d 一起使用)
-          -o, --non-unique              允许使用重复的(非唯一的) UID
-          -p, --password PASSWORD       将加密过的密码 (PASSWORD) 设为新密码
-          -R, --root CHROOT_DIR         chroot 到的目录
-          -s, --shell SHELL             该用户帐号的新登录 shell
-          -u, --uid UID                 用户帐号的新 UID
-          -U, --unlock                  解锁用户帐号
-          -v, --add-subuids FIRST-LAST  add range of subordinate uids
-          -V, --del-subuids FIRST-LAST  remove range of subordinate uids
-          -w, --add-subgids FIRST-LAST  add range of subordinate gids
-          -W, --del-subgids FIRST-LAST  remove range of subordinate gids
-          -Z, --selinux-user  SEUSER       用户账户的新 SELinux 用户映射
+        ......
         
         ```
-     
+        
         ```latex
         justin:x:1001:1001::/home/justin:/bin/sh
         julie@julie-VirtualBox:/home$ ls
@@ -958,9 +937,7 @@ help **命令只能用于内建命令的帮助信息查询**
         justin:x:1001:1001::/home/newhome:/bin/sh
         
         ```
-     
         
-     
      4. 删除``userdel 选项 用户名``
      
         ```latex
@@ -977,22 +954,60 @@ help **命令只能用于内建命令的帮助信息查询**
         ```
         
      5. 查看当前已经拥有的账户名:```awk -F':' '{ print $1}' /etc/passwd```
-     
-     ```latex
-     julie@julie-VirtualBox:/home$ cat /etc/pqsswd
-     ......
-     julie:x:1000:1000:julie,,,:/home/julie:/bin/bash
-     vboxadd:x:999:1::/var/run/vboxadd:/bin/false
-     cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
-     justin:x:1001:1001::/home/justin:/bin/sh
-     ```
+        ```latex
+        julie@julie-VirtualBox:/home$ cat /etc/pqsswd
+        ......
+        julie:x:1000:1000:julie,,,:/home/julie:/bin/bash
+        vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+        cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+        justin:x:1001:1001::/home/justin:/bin/sh
      
      
      
    + 用户组的创建，配置，删除
+     <img src="pics\user&group\usergp.png" style="zoom:50%;" />
      
+     1. 创建```gropuadd```
+        ```latex
+        %创建一个组ID为10000的名叫testgroup的用户组
+        sudo groupadd -g 10000 testgroup
+        julie@julie-VirtualBox:~$ sudo groupadd -g 10000 testgroup
+        julie@julie-VirtualBox:~$ cat /etc/group | grep testgroup %查询我们刚创建的用户组
+        testgroup:x:10000:
+        %直接使用groupadd tgp 会创建一个用户组名叫tgp，用户组ID默认在最大用户组ID+1
+        julie@julie-VirtualBox:~$ sudo groupadd tgp
+        julie@julie-VirtualBox:~$ cat /etc/group | grep tgp
+        tgp:x:10001:
+        使用groupadd --help解锁更多玩法
+        ```
+     
+        
+     
+     2. 删除```groupdel```
+        ```latex
+        sudo groupdel tgp %删除tgp
+        cat /etc/group | grep tgp %查询tgp
+        ```
+     
+        
+     
+     3. 修改groupmod
+        ```latex
+        julie@julie-VirtualBox:~$ sudo groupadd -g 9999 tcp
+        julie@julie-VirtualBox:~$ cat /etc/group | grep tcp
+        tcp:x:9999:
+        
+        julie@julie-VirtualBox:~$ sudo groupmod -g 1999 -n xiaomi tcp
+        julie@julie-VirtualBox:~$ cat /etc/group | grep xiaomi
+        xiaomi:x:1999:
+        ```
+     
+        
+     
+     4. 
+        
 
-    <img src="pics\user&group\usergp.png"/>
+
 
 
 
@@ -1017,6 +1032,7 @@ help **命令只能用于内建命令的帮助信息查询**
    drwxrwxr-x  2 julie julie 4096 9月  23 09:26 .
    drwxr-xr-x 17 julie julie 4096 9月  23 09:26 .. 
    -rw-rw-r--  1 julie julie   58 9月  22 11:21 test.sh
+   4096单位是字节
    %test.sh -代表文件，rw-代表用户权限，即julie对该文件可读，写，不可执行。
    %rw-同组用户的也可读，写，不可执行
    %r--其他用户只能读不能写，不能执行。
@@ -1201,7 +1217,86 @@ help **命令只能用于内建命令的帮助信息查询**
      
      
      
-   + 
+   + chown更改文件拥有者（需要超级用户权限root）
+
+     ``````菜鸟教程
+     Linux chown（英文全拼：change owner）命令用于设置文件所有者和文件关联组的命令。
+     
+     Linux/Unix 是多人多工操作系统，所有的文件皆有拥有者。利用 chown 将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户 ID，组可以是组名或者组 ID，文件是以空格分开的要改变权限的文件列表，支持通配符..
+     
+     chown 需要超级用户 root 的权限才能执行此命令。
+     ``````
+
+     ```latex
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 2 julie julie 4096 9月  23 11:04 tesdir
+     -rwxr-x--x 1 julie julie   58 9月  22 11:21 test.sh
+     我们可以看到我们的文件和文件夹的所属用户都是julie
+     我们使用	cat /etc/passwd 
+     ...
+     julie:x:1000:1000:julie,,,:/home/julie:/bin/bash
+     vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+     cups-pk-helper:x:121:116:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+     justin:x:1001:1001::/home/newhome:/bin/sh
+     可以看到我们所创建的用户：Julie和Justin
+     用户ID和用户组ID分别是
+     1000,1000
+     1001,1001
+     我们使用	sudo useradd -d /home/mary -m mary	创建一个新用户mary
+     cat /etc/passwd
+     mary:x:1002:1002::/home/mary:/bin/sh
+     可以看出其用户ID和用户组ID是
+     1002,1002
+     sudo passwd mary 为其创建密码
+     sudo userdel -r mary 删除用户
+     ```
+
+     更改用户权限
+
+     ```latex
+     %	chown 想要的用户 目标文件
+     %	chown justin test.sh
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie julie 4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 julie julie   58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ sudo chown justin test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie  julie 4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 justin julie   58 9月  22 11:21 test.sh
+     %	chown :想要的用户组 目标文件
+     %	chown :justin test.sh
+     julie@julie-VirtualBox:~/test$ sudo chown :justin test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie  julie  4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 justin justin   58 9月  22 11:21 test.sh
+     %	chown 用户:用户组 目标文件
+     %	chown juslie:julie test.sh 更改文件拥有用户者和用户组分别为julie和julie
+     
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie  julie 4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 justin justin   58 9月  22 11:21 test.sh
+     julie@julie-VirtualBox:~/test$ sudo chown julie:julie test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie julie 4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 julie julie   58 9月  22 11:21 test.sh
+     
+     %	chown 用户ID:用户组ID 目标文件
+     %	chown 1001:0 更改文件拥有用户者和用户组分别为justin和root
+     julie@julie-VirtualBox:~/test$ cat /etc/passwd | grep root
+     root:x:0:0:root:/root:/bin/bash
+     julie@julie-VirtualBox:~/test$ sudo chown 1001:0 test.sh 
+     julie@julie-VirtualBox:~/test$ ls -l
+     总用量 8
+     d-wx------ 3 julie  julie 4096 9月  24 09:42 tesdir
+     -rwxr-x--x 1 justin root    58 9月  22 11:21 test.sh
+     
+     ```
 
      
 
