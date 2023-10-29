@@ -192,5 +192,6 @@ sequenceiq/hadoop-docker
 https://blog.csdn.net/qq_31142553/article/details/96652775
 
 docker cp /home/justin/hadoop/jar_files/hadoop-mapreduce-examples-2.6.0.jar 441813d4f91f:/usr/local/hadoop-2.6.0
+https://blog.csdn.net/weixin_42037651/article/details/125483218
 ```
 
