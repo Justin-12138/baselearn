@@ -6,24 +6,18 @@
 
 [使用docker手册学习docker](https://docs.docker.com/engine/reference/commandline/push/)
 
-
-
 ```latex
-A self-sufficient runtime for containers
-
 Common Commands:
-  run         Create and run a new container from an image
-  根据镜像，运行一个新的容器。镜像可能来源于本地，也可能来源于公开或者私有的仓库。
+
+  run 根据镜像，运行一个新的容器。镜像可能来源于本地，也可能来源于公开或者私有的仓库。
   如果我们直接运行一个本地没有的镜像，那么docker会在docker hub中搜索该镜像的最新版
   eg:
-	(base) justin@justin:~$ docker run centos
+	$ docker run centos
 	Unable to find image 'centos:latest' locally
 	latest: Pulling from library/centos
 	
- 
   exec 重新进入一个正在运行的容器中
-  docker exec -it /bin/bash
-  比如使用docker
+  docker exec -it ubuntu /bin/bash
   
   ps          List containers
   -a 输出所有容器(docker ps 默认只输出正在运行的)
@@ -46,21 +40,29 @@ Common Commands:
   docker pull 可以选择不同的仓库，例如阿里云的镜像服务
   -a
   
-  push        Upload an image to a registry
-  推送镜像到仓库
-  images      List images
-  列出镜像
-  login       Log in to a registry
-  登录到镜像仓库
-  logout      Log out from a registry
-  登出
-  search      Search Docker Hub for images
-  查询镜像，从docker hub中
+  push      推送镜像到仓库
+  images    列出镜像
+  login     登录到镜像仓库
+  logout    登出
+  search    查询镜像，从docker hub中
+  --limit n 查询前三个镜像
+  --filter 
+  stars (int - number of stars the image has)
+is-automated (boolean - true or false) - is the image automated or not
+is-official (boolean - true or false) - is the image official or not
+(base) lz@lz:~$ docker search --filter stars=16550 --filter is-official=true --filter is-automated=false ubuntu
+NAME      DESCRIPTION                                      STARS     OFFICIAL   AUTOMATED
+ubuntu    Ubuntu is a Debian-based Linux operating sys…   16550     [OK]
+  
   version     Show the Docker version information
   docker的版本
   info        Display system-wide information
-  docker info 用于显示 docker 的系统级信息，比如内核，镜像数，容器数等
+  docker info 用于显示 docker 的系统级信息，比如内核，镜像数，容器数,使用的镜像源等
+```
 
+
+
+```latex
 Management Commands:
   builder     Manage builds
   buildx*     Docker Buildx (Docker Inc., v0.11.2)
@@ -68,12 +70,70 @@ Management Commands:
   container   Manage containers
   context     Manage contexts
   image       Manage images
+  ls 
+  	-a
+  	-f
+  	-q
+  history
+  	--format(--format string   Format output using a custom template:,格式化输出)
+  	-H,--human(default true)
+  	--no-trunc(不截断输出，SHA完整输出)
+  	-q
+  inspect 展示一个或多个镜像的细节信息
+  	-f(格式化输出)，--format
+  
+   save        保存镜像
+  docker save myimage:latest > myimage.tar # > 是shell中的重定向符
+  docker save --output myimage.tar myimage:latest
+  docker save -o myimage.tar myimage:latest
+  load       导入镜像
+  docker load < myimage.tar # < 是shell中的重定向符
+  docker load -i/--input myimage.tar
+  
   manifest    Manage Docker image manifests and manifest lists
   network     Manage networks
   plugin      Manage plugins
+  
   system      Manage Docker
+  df
+  	-v
+  events # Get real time events from the server
+  	-f
+  	--format
+  	--since 
+  	--until
+  prune
+  	-a
+  	--filter
+  	-f
+  	-volumes
+  
+  info
+  
   trust       Manage trust on Docker images
   volume      Manage volumes
+  create 创建一个volume
+  	-d (default local)
+  	--label 
+  	-o,--opt map
+  inspect 展示一个或者多个 volume 的信息
+  prune 删除不用的volume
+  	-a
+  	-f
+  	--filter (通过label过滤)
+  ls
+  	-f
+  	-q 
+  rm
+  	-f force
+  	不能删除容器正在使用的volumes
+  
+  
+  
+  
+  
+  
+  
 
 Swarm Commands:
   swarm       Manage Swarm
@@ -90,15 +150,20 @@ Commands:
   import      Import the contents from a tarball to create a filesystem image
   inspect     Return low-level information on Docker objects
   kill        Kill one or more running containers
-  load        Load an image from a tar archive or STDIN
+  
   logs        Fetch the logs of a container
+  
+  
+  
   pause       Pause all processes within one or more containers
   port        List port mappings or a specific mapping for the container
   rename      Rename a container
   restart     Restart one or more containers
   rm          Remove one or more containers
   rmi         Remove one or more images
-  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+
+  
+  
   start       Start one or more stopped containers
   stats       Display a live stream of container(s) resource usage statistics
   stop        Stop one or more running containers
@@ -107,6 +172,7 @@ Commands:
   unpause     Unpause all processes within one or more containers
   update      Update configuration of one or more containers
   wait        Block until one or more containers stop, then print their exit codes
+  
 
 ```
 
@@ -139,9 +205,11 @@ docker run -d (后台)
 -it 一般一起使用
 -p 端口映射 7860(宿主机):7860(docker分配)
 -P docker随即分配
+-v volume_name:/world
 --name=test1 Container name
 删除某个或者某几个镜像
 docker rmi id或者name
+docker run -it --rm --name "test" -v volume1:/data ubuntu /bin/bash
 
 6.查看容器运行情况
 docker ps -alns
@@ -177,11 +245,21 @@ docker ps
 docker cp 356157101b65:/root/a.txt /home/justin/cs
 
 
+自定义镜像
+docker commit cea442789c6a your_image_name:your_tag
+docker commit -m="comment" -a="justin" ID name:tag
+
+#推送镜像到仓库
+docker tag ID repo_name:tag
+docker tag biocpu:latest justin995/bio:2.0
+docker login
+docker push justin995/bio:2.0
+
 
 
 什么是docker虚悬镜像？
 docker system df
-
+1:直接使用docker commit -m "com" $docker(ps -aq)
 
 ```
 
@@ -193,5 +271,6 @@ https://blog.csdn.net/qq_31142553/article/details/96652775
 
 docker cp /home/justin/hadoop/jar_files/hadoop-mapreduce-examples-2.6.0.jar 441813d4f91f:/usr/local/hadoop-2.6.0
 https://blog.csdn.net/weixin_42037651/article/details/125483218
+http://docker.baoshu.red/dashboard/install.html(portainer)
 ```
 

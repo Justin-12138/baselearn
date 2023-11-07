@@ -40,14 +40,15 @@
   ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
   cat .ssh/id_rsa.pub >> .ssh/authorized_keys
   echo "service ssh start" >> ~/.bashrc
-  sourch .bashrc
+  echo "source /etc/profile" >> ~/.bashrc
+  source .bashrc
   ```
 
 + 下载hadoop
   ```latex
   cd
   wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
-  tar -zxvf hadoop-3.3.1.tar.gz -C /usr/local/
+  tar -zxvf hadoop-3.3.1.tar.gz -C /usr/local
   cd /usr/local
   mv hadoop-3.3.1 hadoop
   #创建所需文件夹
@@ -190,9 +191,11 @@
 
 ```latex
 #同时打开三个终端分别运行如下密令
-docker run -it -h h01 --name h01 -p 9870:9870 -p 8088:8088 hadoop /bin/bash
-docker run -it -h h02 --name h02 hadoop /bin/bash
-docker run -it -h h03 --name h03 hadoop /bin/bash
+docker run -it -h h01 --name h01 -p 9870:9870 -p 8088:8088 hd /bin/bash
+docker run -it -h h02 --name h02 hd /bin/bash
+docker run -it -h h03 --name h03 hd /bin/bash
+#docker run -it -h h04 --name h04 hadoop /bin/bash
+#docker run -it -h h05 --name h05 hadoop /bin/bash
 ```
 
 ![image-20231029174330829](assets/image-20231029174330829.png)
@@ -204,12 +207,13 @@ vim /etc/hosts 将三个容器中的ip和主机名改成如下形式，注意三
 172.17.0.2	h01
 172.17.0.3	h02
 172.17.0.4	h03
+
 ```
 
 ![image-20231029174611355](assets/image-20231029174611355.png)
 
 ```latex
-cd cd $HADOOP_CONF_DIR/
+cd $HADOOP_CONF_DIR/
 vim workers
 将原来的localhost 改为h02,h03
 
@@ -257,6 +261,16 @@ hadoop fs -cat /output/part-r-00000
 ![image-20231029180722561](assets/image-20231029180722561.png)
 
 ![image-20231029180859613](assets/image-20231029180859613.png)
+
+#### 5.docker vs vm
+
++ vm启动三台机器什么都不运行
+
+![image-20231029204341887](/home/justin/snap/typora/86/.config/Typora/typora-user-images/image-20231029204341887.png)
+
++ docker run 三台容器
+
+https://www.modb.pro/db/395327
 
 [参考](https://blog.csdn.net/weixin_42037651/article/details/125483218)
 
