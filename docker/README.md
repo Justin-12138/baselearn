@@ -261,6 +261,9 @@ docker push justin995/bio:2.0
 docker system df
 1:直接使用docker commit -m "com" $docker(ps -aq)
 
+容器卷
+--privileged=true
+docker run -it --name "test" --priviledged=true --rm -v /home/lz/data:/data:rw ubuntu 
 ```
 
 #### 2.项目实战
@@ -272,5 +275,6 @@ https://blog.csdn.net/qq_31142553/article/details/96652775
 docker cp /home/justin/hadoop/jar_files/hadoop-mapreduce-examples-2.6.0.jar 441813d4f91f:/usr/local/hadoop-2.6.0
 https://blog.csdn.net/weixin_42037651/article/details/125483218
 http://docker.baoshu.red/dashboard/install.html(portainer)
+
 ```
 
