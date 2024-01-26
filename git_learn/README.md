@@ -5,7 +5,7 @@
 :page_with_curl:其实git很好上手,最好的教程其实是官网的教程[git官网](https://git-scm.com/book/zh/v2)
 :open_book: 需要会一些简单的操作与配置即可解锁版本控制的快乐和GitHub托管代码带来的便捷
 :pager: 以及很多Github的玩法，比如个人博客:notebook:
-:exclamation:本人的此份笔记是于2023年八月中旬所写，后因开学去学校了，中途并未写出一个完整的教程，最终于2023年9.25完成此份笔记。
+:exclamation:本人的此份笔记是于2023年八月中旬所写，后因开学去学校了，中途并未写出一个完整的教程，最终，于2023年9.25完成此份笔记。
 
 #### 0-1关于什么是Git？
 
@@ -51,7 +51,7 @@
 #### 1.版本创建
 
 ```markdown
-mkdir test #创建文件夹
+mkdir test #创建项目文件夹
 cd test #进入test
 git init #初始化
 ```
@@ -110,7 +110,7 @@ HEAD~n #前n个版本
 ```
 
 ```markdown
-git reset --hard HEAD^ #回退到前一个版本
+git reset HEAD^ #回退到前一个版本
 git log #查看日志
 ```
 
@@ -119,8 +119,8 @@ git log #查看日志
 我们现在如果需要回到版本2，则需要使用commit的版本编号来进行制定版本
 
 ```markdown
-git reset --hard 3c881f57f0343ef7c005cb35560eb4add0448e5f #你自己的编号，其实可以不用完全复制，复制前面一部分即可
-git reset --hard 3c881f57f0343e
+git reset 3c881f57f0343ef7c005cb35560eb4add0448e5f #你自己的编号，其实可以不用完全复制，复制前面一部分即可
+git reset 3c881f57f0343e
 git log #查看日志
 cat readme.md #查看文件
 ```
@@ -148,13 +148,13 @@ git reset --hard +版本编号 #回到指定版本
 
 <img src="pics/image-20230729235944094.png" alt="image-20230729235944094" style="zoom: 50%;" />
 
-暂存区简单理解：
+暂存区简单理解：即你未创建版本之前，你可以将你修改过后的文件事先进行跟踪
 
 工作区：有readme.md文件
 
 使用 git add readme.md 会将文件放入版本库的暂存区
 
-使用 git commit -m 'v-n' 会将文件放入到master的版本之下
+使用 git commit -m 'version-n' 会将你修改后的文件放入到master的version-n版本之下
 
 倘若直接对文件进行修改
 
@@ -235,7 +235,6 @@ sudo vi test.py #编辑
 "
 print("v1")
 "
-cat test.py #查看
 git add test.py #跟踪
 git commit -m 'v1'#提交
 git log test.py#查看日志
@@ -279,7 +278,6 @@ git log - test.py
 ```markdown
 git status
 echo 'print("v3")'
-cat test.py
 git status
 git restore test.py #撤销工作区的修改
 cat test.py 
@@ -309,6 +307,15 @@ cat test.py
 <img src="pics/image-20230730132947756.png" alt="image-20230730132947756" style="zoom:33%;" />
 
 <img src="pics/image-20230730133015960.png" alt="image-20230730133015960" style="zoom:33%;" />
+
+**撤销某文件的跟踪**
+
+```latex
+git add test.js
+git rm --cached test.js
+```
+
+
 
 倘若已经提交了版本记录，那你就可以参考版本回退进行操作
 
@@ -386,11 +393,12 @@ git status
 
 **分支管理**
 
-本人对分支的理解在与项目上：一个项目由很多人完成，每个人在公司给定的项目下(一个初始吸纳更亩里面有一些基础的东西，比如之前的项目的内容，我们要在该项目基础上开发出新的功能)创建属于自己的分支，
+本人对分支的理解在与项目上：一个项目由很多人完成，每个人在公司给定的项目下(一个初始项目里面有一些基础的东西，比如之前的项目的内容，我们要在该项目基础上开发出新的功能)创建属于自己的分支，
 
 ```markdown
 git branch #查看分支
 git branch branch_name #创建分支
+git branch -d branch_name #删除分支
 git checkout -b branch_name #创建并进入分支
 git checkout branch_name #切换分支
 git merge branch_name #合并分支

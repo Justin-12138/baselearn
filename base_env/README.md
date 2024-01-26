@@ -893,7 +893,10 @@ git config --global --list
 
 ![image-20230930123201465](assets\image-20230930123201465.png)
 
+**git 配置部分请参考[FAQ](https://github.com/Justin-12138/baselearn/blob/main/git_learn/FAQ.md)**
 
+如下部分可能会出现报错
+22: Connection timed out
 
 ```latex
 之后生成ssh密钥，在git bash中输入如下内容，
