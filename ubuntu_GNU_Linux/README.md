@@ -210,7 +210,7 @@ sudo apt-get install gcc make perl
 <img src="pics\installation\ins\image-20230813144242508.png" alt="image-20230813144242508" style="zoom:50%;" />
 
 
-此时我们便可以调整我们的窗口大小
+此时我们便可以调整我们的窗口大小(增强功能)
 
 <img src="pics\installation\ins\image-20230813144435889.png" alt="image-20230813144435889" style="zoom:50%;" />
 
@@ -411,12 +411,12 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
   `command [-options] [parameters]`
   `命令 [选项] [参数]`
   
-  -options :[可选，非必填] 命令的一些选项，可通过选项来控股之命令细节
+  -options :[可选，非必填] 命令的一些选项，可通过选项来控制命令细节
   
   -parameter :[可选，非必填]命令的参数，多用于命令的指向目标
   OK，相信很多小伙伴看到这里还是很懵逼，没关系大家接着往下看一个简单的命令的栗子:
   
-  `ls`:(list directory contents)命令用于显示指定工作目录下之内容
+  `ls`:(list directory contents)命令用于显示指定工作目录下之内容(工作目录一般代指的是你目前所在目录，当然也可以显示其他指定目录)
   
   ls -l                    # 以长格式显示当前目录中的文件和目录
   ls -a                    # 显示当前目录中的所有文件和目录，包括隐藏文件
@@ -429,7 +429,7 @@ emm，扯远了，服务器大致就是提供服务的机器，根据不同的�
   
   + 内建密令
     
-    内部命令实际上是shell程序的一部分，其中包含的是一些比较简单的linux系统命令，这些命令由shell程序识别并在shell程序内部完成运行，通常在linux系统加载运行时shell就被加载并驻留在系统内存中。内部命令是写在bashy源码里面的，其执行速度比外部命令快，因为解析内部命令shell不需要创建子进程。比如：exit，history，cd，echo等。
+    内部命令实际上是shell程序的一部分，其中包含的是一些比较简单的linux系统命令，这些命令由shell程序识别并在shell程序内部完成运行，通常在linux系统加载运行时shell就被加载并驻留在系统内存中。内部命令是写在bash源码里面的，其执行速度比外部命令快，因为解析内部命令shell不需要创建子进程。比如：exit，history，cd，echo等。
     
   + 外部密令
     
@@ -478,7 +478,7 @@ help **命令只能用于内建命令的帮助信息查询**
    ```latex
    julie@julie-VirtualBox:~$ help help
    help: help [-dms] [模式 ...]
-   	%此处我们可以看到说help的
+   	%此处我们可以看到help的用法与作用
        显示内建命令的相关信息。
        显示内建命令的简略信息。如果指定了 PATTERN 模式，
        给出所有匹配 PATTERN 模式的命令的详细帮助，否则打
