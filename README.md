@@ -2,7 +2,7 @@
 
 #### Project intruduction:sailboat:
 
-A simple warehouse for basic computer learning, including the use of some simple tools (git, docker, Linux, markdown, python). If you find it helpful, please give it a star :star:, and everyone is welcome to make corrections and modifications!:label:
+A simple repo for basic computer learning, including the use of some simple tools (git, docker, Linux, markdown, python). If you find it helpful, please give it a star :star:, and everyone is welcome to make corrections and modifications!:label:
 
 :one:[base_env](https://github.com/Justin-12138/baselearn/tree/main/base_env)
 
