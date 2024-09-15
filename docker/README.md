@@ -210,6 +210,7 @@ docker run -d (后台)
 删除某个或者某几个镜像
 docker rmi id或者name
 docker run -it --rm --name "test" -v volume1:/data ubuntu /bin/bash
+docker run -it --rm --name "test" -v /home/lz/data:/data 045bddd9691a /bin/bash
 
 6.查看容器运行情况
 docker ps -alns
