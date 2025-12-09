@@ -325,14 +325,6 @@ ok，我们的Ubuntu18.04在VirtualBox的安装就算完成啦！
 
    ![](pics\installation\IMG_5274.JPG)
 
-
-
-
-
-
-
-
-
 ## 3.linux的目录结构
 
 0. GUI和命令行
@@ -1003,15 +995,6 @@ help **命令只能用于内建命令的帮助信息查询**
         ```
      
         
-     
-     4. 
-        
-
-
-
-
-
-   
 
 7. chmod&chown
 
@@ -1300,43 +1283,8 @@ help **命令只能用于内建命令的帮助信息查询**
 
      
 
-   + 
 
-     
-
-   + 
-
-     
-
-   
-
-8. 
-
-   
-
-9. 
-
-   
-
-10. 
-
-    
-
-11. 
-
-    
-
-12. 
-
-    
-
-13. 
-
-
-
-
-
-## 6.
+## 6.软连接
 
 软连接(类似快捷方式)
 
@@ -1353,7 +1301,6 @@ date
 ```latex
 julie@julie-VirtualBox:~$ date
 2023年 09月 27日 星期三 19:58:58 CST
-
 
 有空格时候需要使用" "将格式化字符串给引起来
 julie@julie-VirtualBox:~$ date "+%Y-%m-%d %H:%M:%S"
@@ -1382,51 +1329,24 @@ Choibalsan  Jayapura     Nicosia       Taipei
 rm -f /etc/localtime
 ln -s //usr/share/zoneinfo/Asia/Chongqing /etc/localtime
 
-ntp
 
 ```
 
-ip和主机名
-
-ip v4和v6
-
-ip v4 inet 
-
-a: b: c:d
-
-a,b,c,d分别是4个0-255的数字
 
 
 
-127.0.0.1和0.0.0.0均可代表本机
 
-ifconfig
-
-主机名
-
-hostnamectl set-hostname julie
-
-hosts文件
+## 7.ip与主机名
 
 
 
 
 
-## 7.
 
 
 
-## 8.
+
+## 8.磁盘管理
 
 
-
-## 9.
-
-
-
-## 10.
-
-
-
-## 11.
 
